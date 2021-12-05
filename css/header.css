@@ -1,0 +1,598 @@
+/*Верхний блок*/
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__container_black {
+  padding-top: 29px;
+  padding-bottom: 31px;
+  background-color: var(--color-black);
+  z-index: 1;
+}
+
+/*Кнопка бургер меню*/
+.header__btn-burger {
+  display: none;
+  position: relative;
+  width: 46px;
+  height: 38px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.header__burger-inner {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+
+.header__burger-inner::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+
+.header__burger-inner::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+
+/*Скрываем заголовк*/
+.header__main-title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*Лого*/
+.header__link-logo {
+  margin-right: 100px;
+  min-width: 173px;
+  height: 40px;
+  background-image: url("../img/header/logo.svg");
+  background-repeat: no-repeat;
+  background-size: 173px 40px;
+}
+
+/*Меню навигации*/
+.header__nav-wrap {
+  flex: 0 1 1248px;
+  display: flex;
+  justify-content: space-between;
+  transition: top .3s ease-in-out;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.header__nav-link {
+  margin-left: -6px;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-white);
+  text-decoration: none;
+  outline: none;
+  transition: color .3s ease-in-out, background-color .2s linear;
+}
+
+/*ссылка на личный кабинет*/
+.header__link-account {
+  margin-right: -5px;
+  padding: 0 5px;
+  color: var(--color-white);
+  font-size: 18px;
+  outline: none;
+  text-decoration: none;
+  transition: color .3s ease-in-out, background-color .2s linear;
+}
+
+.header__link-account path {
+  transition: fill .3s ease-in-out;
+}
+
+.header__link-arrow {
+  padding-right: 2px;
+}
+
+/*Нижний блок*/
+.header__container_transparent {
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.header__select-list {
+  position: relative;
+  display: flex;
+}
+
+.header__select-item:not(:last-child) {
+  margin-right: 95px;
+}
+
+/*choices*/
+.choices__list .choices__placeholder {
+  margin-left: -4px;
+  padding: 4px 18px 4px 4px;
+  background-image: url('../img/header/arrow_select.svg');
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  background-position: right 15px;
+}
+
+.choices__inner {
+  position: relative;
+  padding: 0;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0;
+}
+
+.choices__placeholder {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+.choices__inner,
+.is-open .choices__inner,
+.is-flipped.is-open .choices__inner {
+  border: none;
+  min-height: auto;
+  background-color: transparent;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__list--dropdown {
+  border: none;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 15;
+}
+
+.choices__list--dropdown .choices__item--selectable:after {
+  display: none;
+}
+
+.choices__list--single .choices__item {
+  font-weight: 400;
+}
+
+.choices__list--dropdown .choices__list {
+  max-height: 220px;
+}
+
+.is-open .choices__list {
+  box-sizing: border-box;
+}
+
+.is-open .choices__list--dropdown {
+  top: 50px;
+}
+
+.choices__list--dropdown .choices__item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+}
+
+.choices__item {
+  font-weight: 600;
+  color: var(--color-white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
+
+.choices__list--dropdown .choices__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.choices__item--choice:first-child {
+  display: none;
+}
+
+/*Фоновые изображения в выпадающих списках*/
+/*Реализм*/
+.header__select-item_realism .choices__item:nth-child(2) {
+  background-image: url("../img/header/art/tintoretto.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/tintoretto@2x.jpg") 2x,
+    url("../img/header/art/tintoretto.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/tintoretto@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/tintoretto.avif") type('image/avif') 1x,
+    url("../img/header/art/tintoretto@2x.jpg") 2x,
+    url("../img/header/art/tintoretto.jpg") 1x
+  );
+}
+
+.header__select-item_realism .choices__item:nth-child(3) {
+  background-image: url("../img/header/art/frederick.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/frederick@2x.jpg") 2x,
+    url("../img/header/art/frederick.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/frederick@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/frederick.avif") type('image/avif') 1x,
+    url("../img/header/art/frederick@2x.jpg") 2x,
+    url("../img/header/art/frederick.jpg") 1x
+  );
+}
+
+.header__select-item_realism .choices__item:nth-child(4) {
+  background-image: url("../img/header/art/leonardo.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/leonardo@2x.jpg") 2x,
+    url("../img/header/art/leonardo.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/leonardo@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/leonardo.avif") type('image/avif') 1x,
+    url("../img/header/art/leonardo@2x.jpg") 2x,
+    url("../img/header/art/leonardo.jpg") 1x
+  );
+}
+
+.header__select-item_realism .choices__item:nth-child(5) {
+  background-image: url("../img/header/art/verrocchio.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/verrocchio@2x.jpg") 2x,
+    url("../img/header/art/verrocchio.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/verrocchio@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/verrocchio.avif") type('image/avif') 1x,
+    url("../img/header/art/verrocchio@2x.jpg") 2x,
+    url("../img/header/art/verrocchio.jpg") 1x
+  );
+}
+
+/*Импрессионизм*/
+.header__select-item_impressionism .choices__item:nth-child(2) {
+  background-image: url("../img/header/art/monet.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/monet@2x.jpg") 2x,
+    url("../img/header/art/monet.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/monet@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/monet.avif") type('image/avif') 1x,
+    url("../img/header/art/monet@2x.jpg") 2x,
+    url("../img/header/art/monet.jpg") 1x
+  );
+}
+
+.header__select-item_impressionism .choices__item:nth-child(3) {
+  background-image: url("../img/header/art/sisley.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/sisley@2x.jpg") 2x,
+    url("../img/header/art/sisley.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/sisley@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/sisley.avif") type('image/avif') 1x,
+    url("../img/header/art/sisley@2x.jpg") 2x,
+    url("../img/header/art/sisley.jpg") 1x
+  );
+}
+
+.header__select-item_impressionism .choices__item:nth-child(4) {
+  background-image: url("../img/header/art/manet.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/manet@2x.jpg") 2x,
+    url("../img/header/art/manet.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/manet@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/manet.avif") type('image/avif') 1x,
+    url("../img/header/art/manet@2x.jpg") 2x,
+    url("../img/header/art/manet.jpg") 1x
+  );
+}
+
+.header__select-item_impressionism .choices__item:nth-child(5) {
+  background-image: url("../img/header/art/renoir.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/renoir@2x.jpg") 2x,
+    url("../img/header/art/renoir.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/renoir@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/renoir.avif") type('image/avif') 1x,
+    url("../img/header/art/renoir@2x.jpg") 2x,
+    url("../img/header/art/renoir.jpg") 1x
+  );
+}
+
+/*Постимпрессионизм*/
+.header__select-item_post-impressionism .choices__item:nth-child(2) {
+  background-image: url("../img/header/art/van_gogh.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/van_gogh@2x.jpg") 2x,
+    url("../img/header/art/van_gogh.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/van_gogh@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/van_gogh.avif") type('image/avif') 1x,
+    url("../img/header/art/van_gogh@2x.jpg") 2x,
+    url("../img/header/art/van_gogh.jpg") 1x
+  );
+}
+
+.header__select-item_post-impressionism .choices__item:nth-child(3) {
+  background-image: url("../img/header/art/cezanne.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/cezanne@2x.jpg") 2x,
+    url("../img/header/art/cezanne.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/cezanne@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/cezanne.avif") type('image/avif') 1x,
+    url("../img/header/art/cezanne@2x.jpg") 2x,
+    url("../img/header/art/cezanne.jpg") 1x
+  );
+}
+
+.header__select-item_post-impressionism .choices__item:nth-child(4) {
+  background-image: url("../img/header/art/gauguin.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/gauguin@2x.jpg") 2x,
+    url("../img/header/art/gauguin.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/gauguin@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/gauguin.avif") type('image/avif') 1x,
+    url("../img/header/art/gauguin@2x.jpg") 2x,
+    url("../img/header/art/gauguin.jpg") 1x
+  );
+}
+
+.header__select-item_post-impressionism .choices__item:nth-child(5) {
+  background-image: url("../img/header/art/sulfur.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/sulfur@2x.jpg") 2x,
+    url("../img/header/art/sulfur.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/sulfur@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/sulfur.avif") type('image/avif') 1x,
+    url("../img/header/art/sulfur@2x.jpg") 2x,
+    url("../img/header/art/sulfur.jpg") 1x
+  );
+}
+
+/*Авангард*/
+.header__select-item_vanguard .choices__item:nth-child(2) {
+  background-image: url("../img/header/art/kandinsky.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/kandinsky@2x.jpg") 2x,
+    url("../img/header/art/kandinsky.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/kandinsky@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/kandinsky.avif") type('image/avif') 1x,
+    url("../img/header/art/kandinsky@2x.jpg") 2x,
+    url("../img/header/art/kandinsky.jpg") 1x
+  );
+}
+
+.header__select-item_vanguard .choices__item:nth-child(3) {
+  background-image: url("../img/header/art/marinetti.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/marinetti@2x.jpg") 2x,
+    url("../img/header/art/marinetti.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/marinetti@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/marinetti.avif") type('image/avif') 1x,
+    url("../img/header/art/marinetti@2x.jpg") 2x,
+    url("../img/header/art/marinetti.jpg") 1x
+  );
+}
+
+.header__select-item_vanguard .choices__item:nth-child(4) {
+  background-image: url("../img/header/art/malevich.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/malevich@2x.jpg") 2x,
+    url("../img/header/art/malevich.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/malevich@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/malevich.avif") type('image/avif') 1x,
+    url("../img/header/art/malevich@2x.jpg") 2x,
+    url("../img/header/art/malevich.jpg") 1x
+  );
+}
+
+.header__select-item_vanguard .choices__item:nth-child(5) {
+  background-image: url("../img/header/art/picasso.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/picasso@2x.jpg") 2x,
+    url("../img/header/art/picasso.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/picasso@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/picasso.avif") type('image/avif') 1x,
+    url("../img/header/art/picasso@2x.jpg") 2x,
+    url("../img/header/art/picasso.jpg") 1x
+  );
+}
+
+/*Футуризм*/
+.header__select-item_futurism .choices__item:nth-child(2) {
+  background-image: url("../img/header/art/carr.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/carr@2x.jpg") 2x,
+    url("../img/header/art/carr.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/carr@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/carr.avif") type('image/avif') 1x,
+    url("../img/header/art/carr@2x.jpg") 2x,
+    url("../img/header/art/carr.jpg") 1x
+  );
+}
+
+.header__select-item_futurism .choices__item:nth-child(3) {
+  background-image: url("../img/header/art/pratella.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/pratella@2x.jpg") 2x,
+    url("../img/header/art/pratella.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/pratella@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/pratella.avif") type('image/avif') 1x,
+    url("../img/header/art/pratella@2x.jpg") 2x,
+    url("../img/header/art/pratella.jpg") 1x
+  );
+}
+
+.header__select-item_futurism .choices__item:nth-child(4) {
+  background-image: url("../img/header/art/severini.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/severini@2x.jpg") 2x,
+    url("../img/header/art/severini.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/severini@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/severini.avif") type('image/avif') 1x,
+    url("../img/header/art/severini@2x.jpg") 2x,
+    url("../img/header/art/severini.jpg") 1x
+  );
+}
+
+.header__select-item_futurism .choices__item:nth-child(5) {
+  background-image: url("../img/header/art/balla.jpg");
+  background-image: -webkit-image-set(
+    url("../img/header/art/balla@2x.jpg") 2x,
+    url("../img/header/art/balla.jpg") 1x
+  );
+  background-image: image-set(
+    url("../img/header/art/balla@2x.avif") type('image/avif') 2x,
+    url("../img/header/art/balla.avif") type('image/avif') 1x,
+    url("../img/header/art/balla@2x.jpg") 2x,
+    url("../img/header/art/balla.jpg") 1x
+  );
+}
+
+/*simplebar*/
+.simplebar-track {
+  /*right: -19px;*/
+  background-color: var(--color-black);
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 2px;
+}
+
+.simplebar-scrollbar {
+  opacity: 1;
+}
+
+.simplebar-scrollbar::before {
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  opacity: 1;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  background: var(--color-white);
+  opacity: 1;
+}
+
+/*Поиск*/
+.header__search-form_mobile {
+  display: none;
+  position: absolute;
+  right: 50px;
+}
+
+.header__search-btn {
+  padding: 6px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.header__search-btn_desktop {
+  margin-right: 2px;
+  width: 23px;
+  height: 27px;
+  background-image: url("../img/header/search_btn.svg");
+  background-size: 23px 22px;
+  background-position: left 5px;
+}
+
+.header__search-btn_mobile {
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/header/search_btn_tablet.svg");
+  background-size: 30px 30px;
+  background-position: center center;
+}
+
+.header__search-btn_mobile-active {
+  display: none;
+}
+
+.header__search-input {
+  width: 219px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
+  background-color: transparent;
+  outline: none;
+  transition: border-bottom-color .3s ease-in-out;
+}
+
+.header__search-input::placeholder {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header__search-input_mobile {
+  margin-left: 10px;
+  padding: 0;
+  width: 21.3vw;
+}

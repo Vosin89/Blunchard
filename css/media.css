@@ -1,0 +1,367 @@
+@media (max-width: 1327px) {
+  /*header*/
+  /*Верхний блок*/
+  /*Лого*/
+  .header__link-logo {
+    margin-right: 20px;
+  }
+
+  /*Меню навигации*/
+  .header__nav {
+    margin-right: 20px;
+  }
+
+  .header__nav-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  /*Нижний блок*/
+  /*choices*/
+  .header__select-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  /*Поиск*/
+  .header__search-input_desktop {
+    width: 155px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /*header*/
+  .header__container_black {
+    padding-bottom: 29px;
+  }
+
+  .header__btn-burger {
+    display: block;
+    margin-right: 0;
+  }
+
+  /*Лого*/
+  .header__link-logo {
+    min-width: 188px;
+    height: 42px;
+    background-image: url("../img/header/logo_tablet.svg");
+    background-size: 188px 42px;
+  }
+
+  /*Меню навигации*/
+  .header__nav-wrap {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: start;
+    padding: 96px 48px 51px;
+    width: 100%;
+    max-height: 768px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 4;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+  }
+
+  .header__nav-link {
+    font-size: 24px;
+    line-height: 64px;
+  }
+
+  /*Вход в аккаунт*/
+  .header__link-account {
+    border: 2px solid var(--color-amethyst);
+    border-radius: 100px;
+    padding: 22px 88px;
+  }
+
+  /*Поиск*/
+  .header__search-btn_mobile-active {
+    display: block;
+  }
+
+  /*Нижний контейнер*/
+  .header__container_transparent {
+    display: none;
+  }
+
+  /*Section hero*/
+  .section-hero__background {
+    top: -100px;
+    height: 768px;
+  }
+
+  .section-hero__container {
+    padding-top: 115px;
+    padding-bottom: 140px;
+  }
+
+  .section-hero__title {
+    margin-bottom: 10px;
+    line-height: 83px;
+  }
+
+  .section-hero__lead {
+    margin-bottom: 160px;
+    max-width: 660px;
+  }
+
+  /*Section us*/
+  .section-us {
+    padding-top: 77px;
+    padding-bottom: 55px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /*Поиск*/
+  .header__search-btn_mobile-active {
+    display: block;
+  }
+
+  .header__search-btn_mobile-active::before,
+  .header__search-btn_mobile-active::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--color-white);
+    z-index: 7;
+  }
+  .header__search-btn_mobile-active::before {
+    transform: rotate(45deg);
+  }
+
+  .header__search-btn_mobile-active::after {
+    transform: rotate(-45deg);
+  }
+
+  .header__search-form_mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 34px 100px 34px 50px;
+    max-height: 100px;
+    background-color: var(--color-black);
+    z-index: 6;
+  }
+
+  .header__search-input_mobile {
+    flex: 0 1 100%;
+  }
+}
+
+
+@media (max-width: 661px) {
+  /*header*/
+  /*Меню навигации*/
+  .header__nav-wrap {
+    padding: 96px 48px 51px;
+    max-height: 565px;
+  }
+
+  .header__nav-link {
+    font-size: 18px;
+    line-height: 48px;
+  }
+
+  /*Вход в аккаунт*/
+  .header__link-account {
+    border-radius: 100px;
+    padding: 15px 60px;
+  }
+
+  /*Section hero*/
+  .section-hero__background {
+    height: 565px;
+  }
+
+  .section-hero__background-img {
+    height: 565px;
+  }
+
+  .section-hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 25px 75px;
+  }
+
+  .section-hero__title {
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  .section-hero__lead {
+    margin-bottom: 50px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .section-hero__link-sub {
+    padding: 20px 30px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  /*Section us*/
+  .section-us {
+    padding-top: 35px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  /*Верхний блок*/
+  .header__container_black {
+    padding-top: 8px;
+    padding-bottom: 9px;
+  }
+
+  /*Кнопка бургер меню*/
+  .header__btn-burger {
+    width: 35px;
+    height: 28px;
+  }
+
+  .header__burger-inner {
+    width: 25px;
+    height: 2px;
+  }
+
+  .header__burger-inner::after {
+    top: 8px;
+    width: 16px;
+    height: 2px;
+  }
+
+  .header__burger-inner::before {
+    top: 16px;
+    width: 10px;
+    height: 2px;
+  }
+
+  /*Лого*/
+  .header__link-logo {
+    min-width: 97px;
+    height: 22px;
+    background-image: url("../img/header/logo_mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 97px 22px;
+  }
+
+  /*Меню навигации*/
+  .header__nav-wrap {
+    padding: 46px 15px 27px;
+    max-height: 355px;
+  }
+
+  .header__nav-link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  /*Вход в аккаунт*/
+  .header__link-account {
+    padding: 10px 31px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .header__link-arrow svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  /*Поиск*/
+  .header__search-form_mobile {
+    padding: 40px 60px 19px;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .header__search-btn_mobile {
+    margin-right: -6px;
+    margin-bottom: -6px;
+    width: 27px;
+    height: 27px;
+    background-image: url("../img/header/search_btn_mobile.svg");
+    background-size: 27px 27px;
+  }
+
+  /*Section hero*/
+  .section-hero__background {
+    height: 410px;
+  }
+
+  .section-hero__background-img {
+    height: 410px;
+  }
+
+  .section-hero__container {
+    padding: 30px 25px 45px;
+  }
+
+  .section-hero__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .section-hero__lead {
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  .section-hero__link-sub {
+    padding: 12px 17px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  /*Section us*/
+  .section-us {
+    padding-top: 51px;
+  }
+
+  .section-us__title {
+    margin-bottom: 12px;
+  }
+
+  .section-us__description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}

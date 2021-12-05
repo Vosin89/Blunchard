@@ -1,0 +1,176 @@
+/*header*/
+/*Навигация и вход в аккаунт*/
+.header__nav-link:hover,
+.header__link-account:hover {
+  color: var(--color-pink-purple);
+}
+
+.header__nav-link:focus,
+.header__link-account:focus {
+  background-color: var(--color-purple);
+}
+
+.header__nav-link:active {
+  color: var(--color-purple);
+  background-color: transparent;
+}
+
+.header__link-account:hover path {
+  fill: currentColor;
+}
+
+.header__link-account:active {
+  color: var(--color-amethyst);
+  background-color: transparent;
+}
+
+.header__link-account:active path {
+  fill: currentColor;
+}
+
+/*Выпадающие списки*/
+.choices__placeholder:hover {
+  color: var(--color-amethyst);
+}
+
+.choices__placeholder:hover {
+  background-image: url('../img/header/arrow_select-hover.svg');
+}
+
+.choices:focus .choices__placeholder {
+  background-color: var(--color-purple);
+}
+
+.choices.is-open .choices__placeholder {
+  color: var(--color-amethyst);
+  background-image: url('../img/header/arrow_select-active.svg');
+  background-color: transparent;
+}
+
+.choices__item:not(:first-child):hover {
+  outline: var(--color-amethyst) solid 2px;
+  background-color: transparent;
+}
+
+/*focused*/
+.is-highlighted {
+  outline: var(--color-amethyst) solid 2px;
+  background-color: transparent;
+}
+
+.choices__item:not(:first-child):active {
+  outline: var(--color-craiola) solid 2px;
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(.jpg);
+}
+
+/*форма поиска*/
+.header__search-input:hover {
+  border-bottom-color: var(--color-pink-purple);
+}
+
+.header__search-input:focus {
+  border-bottom-color: var(--color-pink-purple);
+}
+
+.header__search-input:active {
+  border-bottom-color: var(--color-purple);
+}
+
+/*Section hero*/
+/*Кнопка подписаться на рассылку*/
+.section-hero__link-sub:hover {
+  outline: var(--color-craiola) solid 3px;
+}
+
+.section-hero__link-sub:focus {
+  outline: var(--color-pink-purple) solid 2px;
+  outline-offset: 3px;
+}
+
+.section-hero__link-sub:active {
+  outline: var(--color-craiola) solid 3px;
+  outline-offset: 0;
+  background-color: var(--color-purple);
+}
+
+
+@media screen and (max-width: 1024px) {
+  /*Лого*/
+  .search-open .header__link-logo {
+    margin-right: calc(50% - 94px);
+  }
+
+  /*Мобильный поиск*/
+  .search-open .js-header__search-form_mobile-active {
+    display: block;
+  }
+
+  .search-open .header__search-btn_mobile-active {
+    display: none;
+  }
+
+  /*Меню бургер*/
+  .menu-open {
+    overflow: hidden;
+  }
+
+  .menu-open .header__burger-inner_active {
+    top: 50%;
+    right: 50%;
+    transform: rotate(45deg);
+  }
+
+  .menu-open .header__burger-inner_active::after {
+    display: none;
+  }
+
+  .menu-open .header__burger-inner_active::before {
+    top: 0;
+    width: 36px;
+    transform: rotate(-90deg);
+  }
+
+  .menu-open .nav-active {
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /*Поиск*/
+  .search-open .header__search-btn_mobile-active {
+    display: block;
+    position: absolute;
+    right: 50px;
+    z-index: 7;
+    background-image: none;
+  }
+
+  .search-open .header__search-btn_mobile-active::before,
+  .search-open .header__search-btn_mobile-active::after {
+    width: 37px;
+    height: 4px;
+  }
+
+  .search-open .header__search-form_mobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-open .header__burger-inner_active {
+    width: 19px;
+  }
+
+  .menu-open .header__burger-inner_active::before {
+    width: 19px;
+  }
+
+  .search-open .header__search-btn_mobile-active {
+    right: 15px;
+  }
+
+  .search-open .header__search-btn_mobile-active::before,
+  .search-open .header__search-btn_mobile-active::after {
+    width: 19px;
+    height: 2px;
+}

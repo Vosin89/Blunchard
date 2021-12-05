@@ -1,0 +1,12 @@
+@keyframes animBackgroundHero {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.section-hero__background-img {
+  animation: animBackgroundHero 4s linear .5s infinite alternate;
+}
