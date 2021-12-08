@@ -8,5 +8,5 @@
 }
 
 .section-hero__slide {
-  animation: animBackgroundHero 4s linear infinite alternate;
+  animation: animBackgroundHero 4s linear .5s infinite alternate;
 }

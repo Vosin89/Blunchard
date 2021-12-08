@@ -8,13 +8,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Blanchard-художественная галерея</title>
 
-  <!-- Include Choices CSS -->
-  <link rel="stylesheet" href="./css/choices.min.css" />
-  <!--  Simplebar-->
+  <!-- Simplebar -->
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <!--  Swiper js-->
   <link
     rel="stylesheet"
-    href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
   />
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -34,11 +35,11 @@
         </button>
         <h1 class="header__main-title">Blanchard - художественная галерея</h1>
         <a class="header__link-logo"></a>
-        <div class="header__nav-wrap nav-active">
+        <div class="header__nav-wrap nav-active js-navMenu">
           <nav class="header__nav header__nav_active">
             <ul class="header__nav-list list-reset">
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">О&nbsp;нас</a>
+                <a href="#about-us" class="header__nav-link js-navLink">О&nbsp;нас</a>
               </li>
               <li class="header__nav-item">
                 <a href="#" class="header__nav-link js-navLink">Галерея</a>
@@ -70,97 +71,190 @@
           </a>
         </div>
         <button class="header__search-btn header__search-btn_mobile header__search-btn_mobile-active js-mobileSearchBtn" aria-label="Открыть поиск"></button>
-        <form action="#" class="header__search-form header__search-form_mobile js-header__search-form_mobile-active">
+        <form action="#" class="header__search-form header__search-form_mobile header__search-form_mobile-active js-mobileSearch">
           <button class="header__search-btn header__search-btn_mobile" aria-label="Поиск"></button>
-          <input type="search" class="header__search-input header__search-input_mobile js-headerSearchInputMobile" placeholder="Поиск по сайту">
+          <input type="search" class="header__search-input header__search-input_mobile">
         </form>
       </div>
     </div>
     <div class="header__container_transparent">
       <div class="container header__container">
-        <ul class="header__select-list list-reset">
-          <li class="header__select-item header__select-item_realism">
-            <form>
-              <label for="realism">
-                <select name="realism" id="realism" class="header__select js-select" aria-label="Открыть список художников">
-                  <option value="">Реализм</option>
-                  <option value="Tintoretto">Тинторетто</option>
-                  <option value="Frederick">Фридрих</option>
-                  <option value="Leonardo">Леонардо</option>
-                  <option value="Verrocchio">Верроккьо</option>
-                  <option value="Tintoretto">Тинторетто</option>
-                  <option value="Frederick">Фридрих</option>
-                  <option value="Leonardo">Леонардо</option>
-                  <option value="Verrocchio">Верроккьо</option>
-                  <option value="Tintoretto">Тинторетто</option>
-                  <option value="Frederick">Фридрих</option>
-                  <option value="Leonardo">Леонардо</option>
-                  <option value="Verrocchio">Верроккьо</option>
-                  <option value="Tintoretto">Тинторетто</option>
-                  <option value="Frederick">Фридрих</option>
-                  <option value="Leonardo">Леонардо</option>
-                  <option value="Verrocchio">Верроккьо</option>
-                  <option value="Tintoretto">Тинторетто</option>
-                  <option value="Frederick">Фридрих</option>
-                  <option value="Leonardo">Леонардо</option>
-                  <option value="Verrocchio">Верроккьо</option>
-                </select>
-              </label>
-            </form>
-          </li>
-          <li class="header__select-item header__select-item_impressionism">
-            <form>
-              <label for="impressionism">
-                <select name="impressionism" id="impressionism" class="header__select js-select" aria-label="Открыть список художников">
-                  <option value="">Импрессионизм</option>
-                  <option value="Monet">Моне</option>
-                  <option value="Sisley">Сислей</option>
-                  <option value="Manet">Мане</option>
-                  <option value="Renoir">Ренуар</option>
-                </select>
-              </label>
-            </form>
-          </li>
-          <li class="header__select-item header__select-item_post-impressionism">
-            <form>
-              <label for="post-impressionism">
-                <select name="post-impressionism" id="post-impressionism" class="header__select js-select" aria-label="Открыть список художников">
-                  <option value="">Постимпрессионизм</option>
-                  <option value="van Gogh">Ван Гог</option>
-                  <option value="Cezanne">Сезанн</option>
-                  <option value="Gauguin">Гоген</option>
-                  <option value="Sulfur">Сёра</option>
-                </select>
-              </label>
-            </form>
-          </li>
-          <li class="header__select-item header__select-item_vanguard">
-            <form>
-              <label for="vanguard">
-                <select name="vanguard" id="vanguard" class="header__select js-select" aria-label="Открыть список художников">
-                  <option value="">Авангард</option>
-                  <option value="Kandinsky">Кандинский</option>
-                  <option value="Marinetti">Маринетти</option>
-                  <option value="Malevich">Малевич</option>
-                  <option value="Picasso">Пикассо</option>
-                </select>
-              </label>
-            </form>
-          </li>
-          <li class="header__select-item header__select-item_futurism">
-            <form>
-              <label for="futurism">
-                <select name="futurism" id="futurism" class="header__select js-select" aria-label="Открыть список художников">
-                  <option value="">Футуризм</option>
-                  <option value="Carr">Карра</option>
-                  <option value="Pratella">Прателла</option>
-                  <option value="Severini">Северини</option>
-                  <option value="Balla">Балла</option>
-                </select>
-              </label>
-            </form>
-          </li>
-        </ul>
+        <div class="header__nav-artist">
+          <div class="header__nav-artist-inner">
+            <button class="header__btn-art js-tabBtnArt"
+                    type="button"
+                    data-path="realism"
+                    tabindex="0"
+                    aria-label="Открыть спискок деятелей искусства">
+              Реализм
+              <span class="header__btn-art-inner">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 1L6 6L1 1" stroke="white"/>
+</svg>
+              </span>
+            </button>
+            <div class="header__list-artist-wrapper js-listArtist" data-target-list="realism">
+              <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                <li class="header__item-artist tintoretto" tabindex="-1">
+                  <a href="#" class="header__link-artist" tabindex="-1">Тинторетто</a>
+                </li>
+                <li class="header__item-artist frederick" tabindex="-1">
+                  <a href="#" class="header__link-artist" tabindex="-1">Фридрих</a>
+                </li>
+                <li class="header__item-artist leonardo" tabindex="-1">
+                  <a href="#" class="header__link-artist" tabindex="-1">Леонардо</a>
+                </li>
+                <li class="header__item-artist verrocchio" tabindex="-1">
+                  <a href="#" class="header__link-artist" tabindex="-1">Верроккьо</a>
+                </li>
+                <li class="header__item-artist tintoretto">
+                  <a href="#" class="header__link-artist">Тинторетто</a>
+                </li>
+                <li class="header__item-artist frederick">
+                  <a href="#" class="header__link-artist">Фридрих</a>
+                </li>
+                <li class="header__item-artist leonardo">
+                  <a href="#" class="header__link-artist">Леонардо</a>
+                </li>
+                <li class="header__item-artist verrocchio">
+                  <a href="#" class="header__link-artist">Верроккьо</a>
+                </li>
+                <li class="header__item-artist tintoretto">
+                  <a href="#" class="header__link-artist">Тинторетто</a>
+                </li>
+                <li class="header__item-artist frederick">
+                  <a href="#" class="header__link-artist">Фридрих</a>
+                </li>
+                <li class="header__item-artist leonardo">
+                  <a href="#" class="header__link-artist">Леонардо</a>
+                </li>
+                <li class="header__item-artist verrocchio">
+                  <a href="#" class="header__link-artist">Верроккьо</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__nav-artist-inner">
+            <button class="header__btn-art js-tabBtnArt"
+                    type="button"
+                    data-path="impressionism"
+                    tabindex="0"
+                    aria-label="Открыть спискок деятелей искусства">
+              Импрессионизм
+              <span class="header__btn-art-inner">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 1L6 6L1 1" stroke="white"/>
+</svg>
+              </span>
+            </button>
+            <div class="header__list-artist-wrapper js-listArtist" data-target-list="impressionism">
+              <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                <li class="header__item-artist monet">
+                  <a href="#" class="header__link-artist">Моне</a>
+                </li>
+                <li class="header__item-artist sisley">
+                  <a href="#" class="header__link-artist">Сислей</a>
+                </li>
+                <li class="header__item-artist manet">
+                  <a href="#" class="header__link-artist">Мане</a>
+                </li>
+                <li class="header__item-artist renoir">
+                  <a href="#" class="header__link-artist">Ренуар</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__nav-artist-inner">
+            <button class="header__btn-art js-tabBtnArt"
+                    type="button"
+                    data-path="post-impressionism"
+                    tabindex="0"
+                    aria-label="Открыть спискок деятелей искусства">
+              Постимпрессионизм
+              <span class="header__btn-art-inner">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 1L6 6L1 1" stroke="white"/>
+</svg>
+              </span>
+            </button>
+            <div class="header__list-artist-wrapper js-listArtist" data-target-list="post-impressionism">
+              <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                <li class="header__item-artist van-gogh">
+                  <a href="#" class="header__link-artist">Ван Гог</a>
+                </li>
+                <li class="header__item-artist cezanne">
+                  <a href="#" class="header__link-artist">Сезанн</a>
+                </li>
+                <li class="header__item-artist gauguin">
+                  <a href="#" class="header__link-artist">Гоген</a>
+                </li>
+                <li class="header__item-artist sulfur">
+                  <a href="#" class="header__link-artist">Сёра</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__nav-artist-inner">
+            <button class="header__btn-art js-tabBtnArt"
+                    type="button"
+                    data-path="vanguard"
+                    tabindex="0"
+                    aria-label="Открыть спискок деятелей искусства">
+              Авангард
+              <span class="header__btn-art-inner">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 1L6 6L1 1" stroke="white"/>
+</svg>
+              </span>
+            </button>
+            <div class="header__list-artist-wrapper js-listArtist" data-target-list="vanguard">
+              <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                <li class="header__item-artist kandinsky">
+                  <a href="#" class="header__link-artist">Кандинский</a>
+                </li>
+                <li class="header__item-artist marinetti">
+                  <a href="#" class="header__link-artist">Маринетти</a>
+                </li>
+                <li class="header__item-artist malevich">
+                  <a href="#" class="header__link-artist">Малевич</a>
+                </li>
+                <li class="header__item-artist picasso">
+                  <a href="#" class="header__link-artist">Пикассо</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__nav-artist-inner">
+            <button class="header__btn-art js-tabBtnArt"
+                    type="button"
+                    data-path="futurism"
+                    tabindex="0"
+                    aria-label="Открыть спискок деятелей искусства">
+              Футуризм
+              <span class="header__btn-art-inner">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 1L6 6L1 1" stroke="white"/>
+</svg>
+              </span>
+            </button>
+            <div class="header__list-artist-wrapper js-listArtist" data-target-list="futurism">
+              <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                <li class="header__item-artist carr">
+                  <a href="#" class="header__link-artist">Карра</a>
+                </li>
+                <li class="header__item-artist pratella">
+                  <a href="#" class="header__link-artist">Прателла</a>
+                </li>
+                <li class="header__item-artist severini">
+                  <a href="#" class="header__link-artist">Северини</a>
+                </li>
+                <li class="header__item-artist score">
+                  <a href="#" class="header__link-artist">Балла</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <form action="#" class="header__search-form">
           <button class="header__search-btn header__search-btn_desktop" type="submit" aria-label="Поиск"></button>
           <input type="search" class="header__search-input header__search-input_desktop" placeholder="Поиск по сайту">
@@ -172,44 +266,22 @@
   <main class="main">
     <section class="section-hero">
       <div class="section-hero__background">
-        <picture>
-          <source media="(max-width: 576px)" type="image/avif"
-                  srcset="./img/main/hero/320/background_1@2x.avif" 2x,
-                  srcset="./img/main/hero/320/background_1.avif" 1x>
-          <source media="(max-width: 576px)" type="image/webp"
-                  srcset="./img/main/hero/320/background_1@2x.webp" 2x,
-                  srcset="./img/main/hero/320/background_1.webp" 1x>
-          <source media="max-width: 576px"
-                  srcset="./img/main/hero/320/background_1@2x.jpg" 2x,
-                  srcset="./img/main/hero/320/background_1.jpg" 1x>
-          <source media="(max-width: 768px)" type="image/avif"
-                  srcset="./img/main/hero/768/background_1@2x.avif" 2x,
-                  srcset="./img/main/hero/768/background_1.avif" 1x>
-          <source media="(max-width: 768px)" type="image/webp"
-                  srcset="./img/main/hero/768/background_1@2x.webp" 2x,
-                  srcset="./img/main/hero/768/background_1.webp" 1x>
-          <source media="max-width: 768px"
-                  srcset="./img/main/hero/768/background_1@2x.jpg" 2x,
-                  srcset="./img/main/hero/768/background_1.jpg" 1x>
-          <source media="(max-width: 1024px)" type="image/avif"
-                  srcset="./img/main/hero/1024/background_1@2x.avif" 2x,
-                  srcset="./img/main/hero/1024/background_1.avif" 1x>
-          <source media="(max-width: 1024px)" type="image/webp"
-                  srcset="./img/main/hero/1024/background_1@2x.webp" 2x,
-                  srcset="./img/main/hero/1024/background_1.webp" 1x>
-          <source media="max-width: 1024px"
-                  srcset="./img/main/hero/1024/background_1@2x.jpg" 2x,
-                  srcset="./img/main/hero/1024/background_1.jpg" 1x>
-          <source type="image/avif"
-                  srcset="./img/main/hero/1920/background_1@2x.avif" 2x,
-                  srcset="./img/main/hero/1920/background_1.avif" 1x>
-          <source type="image/webp"
-                  srcset="./img/main/hero/1920/background_1@2x.webp" 2x,
-                  srcset="./img/main/hero/1920/background_1.webp" 1x>
-          <img class="section-hero__background-img"
-               src="./img/main/hero/1920/background_1.jpg",
-               srcset="./img/main/hero/1920/background_1@2x.jpg" 2x>
-        </picture>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="section-hero__slide slide-first"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="section-hero__slide slide-second"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="section-hero__slide slide-third"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container section-hero__container">
         <h2 class="section-hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
@@ -220,7 +292,7 @@
       </div>
     </section>
 
-    <section class="section-us">
+    <section id="about-us" class="section-us">
       <div class="container">
         <h2 class="title section-us__title">О нас</h2>
         <p class="section-us__description">
@@ -230,13 +302,10 @@
     </section>
   </main>
 
-  <!--  Include burger menu-->
-  <script src="./js/burger.js"></script>
-  <!-- Include Choices JavaScript -->
-  <script src="./js/choices.min.js"></script>
-  <!--  Include Simplebar-->
+  <!-- Include Simplebar JavaScript -->
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="./js/choices.js"></script>
+  <!-- Include Swiper js-->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

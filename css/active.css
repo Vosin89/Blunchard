@@ -29,38 +29,46 @@
 }
 
 /*Выпадающие списки*/
-.choices__placeholder:hover {
+.header__btn-art:hover {
   color: var(--color-amethyst);
 }
 
-.choices__placeholder:hover {
-  background-image: url('../img/header/arrow_select-hover.svg');
+.header__btn-art:hover path {
+  stroke: currentColor;
 }
 
-.choices:focus .choices__placeholder {
+.header__btn-art:focus-visible {
+  color: var(--color-white);
   background-color: var(--color-purple);
 }
 
-.choices.is-open .choices__placeholder {
-  color: var(--color-amethyst);
-  background-image: url('../img/header/arrow_select-active.svg');
-  background-color: transparent;
+.header__btn-art_active {
+  color: var(--color-purple);
 }
 
-.choices__item:not(:first-child):hover {
-  outline: var(--color-amethyst) solid 2px;
-  background-color: transparent;
+.header__btn-art_active svg {
+  transform: rotateZ(180deg);
 }
 
-/*focused*/
-.is-highlighted {
-  outline: var(--color-amethyst) solid 2px;
-  background-color: transparent;
+.header__btn-art_active path {
+  stroke: currentColor;
 }
 
-.choices__item:not(:first-child):active {
-  outline: var(--color-craiola) solid 2px;
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(.jpg);
+.header__list-artist_active {
+  display: block;
+}
+
+.header__item-artist:hover  {
+  outline: var(--color-amethyst) 2px solid;
+}
+
+.header__item-artist:focus-within {
+  outline: var(--color-amethyst) 2px solid;
+}
+
+.header__item-artist:active {
+  outline: var(--color-craiola) 2px solid;
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
 /*форма поиска*/
@@ -101,8 +109,8 @@
   }
 
   /*Мобильный поиск*/
-  .search-open .js-header__search-form_mobile-active {
-    display: block;
+  .search-open .header__search-form_mobile-active {
+    display: flex;
   }
 
   .search-open .header__search-btn_mobile-active {
@@ -151,9 +159,9 @@
     height: 4px;
   }
 
-  .search-open .header__search-form_mobile {
-    display: flex;
-  }
+  /*.search-open .header__search-form_mobile-active {*/
+  /*  display: flex;*/
+  /*}*/
 }
 
 @media (max-width: 480px) {
@@ -173,4 +181,5 @@
   .search-open .header__search-btn_mobile-active::after {
     width: 19px;
     height: 2px;
+  }
 }
