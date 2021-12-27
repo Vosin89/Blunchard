@@ -1,263 +1,272 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width,
-        initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,
+				initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Blanchard-художественная галерея</title>
 
   <!-- Simplebar -->
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link href="https://unpkg.com/simplebar@latest/dist/simplebar.css" rel="stylesheet">
   <!--  Swiper js-->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-  />
+  <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet">
+  <!--  Choices js -->
+  <link href="./css/choices.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/fonts.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/animation.css">
-  <link rel="stylesheet" href="./css/media.css">
-  <link rel="stylesheet" href="./css/active.css">
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/fonts.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/header.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+  <link href="./css/footer.css" rel="stylesheet">
+  <link href="./css/animation.css" rel="stylesheet">
+  <link href="./css/media.css" rel="stylesheet">
+  <link href="./css/active.css" rel="stylesheet">
 </head>
+
 <body class="body js-body">
   <header class="header">
-    <div class="header__container_black">
+    <div class="header__container-black">
       <div class="container header__container">
-        <button class="header__btn-burger js-mobileMenuBtn" type="submit"  aria-label="Открыть меню навигации" tabindex="0">
+        <button class="header__btn-burger js-mobile-menu-btn" type="submit" aria-label="Открыть меню навигации">
           <span class="header__burger-inner header__burger-inner_active"></span>
         </button>
         <h1 class="header__main-title">Blanchard - художественная галерея</h1>
-        <a class="header__link-logo"></a>
-        <div class="header__nav-wrap nav-active js-navMenu">
-          <nav class="header__nav header__nav_active">
-            <ul class="header__nav-list list-reset">
-              <li class="header__nav-item">
-                <a href="#about-us" class="header__nav-link js-navLink">О&nbsp;нас</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">Галерея</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">Каталог</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">События</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">Издания</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">Проекты</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link js-navLink">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <a href="#" class="header__link-account">
-            <span class="header__link-arrow">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
-</svg>
-            </span>
-            Войти
-          </a>
+        <a class="header__link-logo">
+          <picture>
+            <source media="(max-width: 480px)" srcset="./img/header/logo_mobile.svg">
+            <source media="(max-width: 1024px)" srcset="./img/header/logo_tablet.svg">
+            <img class="header__logo-img" src="./img/header/logo.svg" alt="Логотип: Blanchard - художественная галерея">
+          </picture>
+        </a>
+        <div class="header__nav-wrap nav-active js-nav-menu">
+          <div class="header__container-simplebar simplebar" data-simplebar>
+            <div class="header__nav-scroll">
+              <nav class="header__nav header__nav_active">
+                <ul class="header__nav-list list-reset">
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-navLink" href="#about-us">О&nbsp;нас</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-nav-link" href="#">Галерея</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-nav-link" href="#">Каталог</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-nav-link" href="#">События</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-nav-link" href="#">Издания</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-nav-link" href="#">Проекты</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link js-nav-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <a class="header__link-account" href="#">
+                <span class="header__link-arrow">
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                      fill="white"></path>
+                  </svg>
+                </span>
+                &nbsp;Войти
+              </a>
+            </div>
+          </div>
         </div>
-        <button class="header__search-btn header__search-btn_mobile header__search-btn_mobile-active js-mobileSearchBtn" aria-label="Открыть поиск"></button>
-        <form action="#" class="header__search-form header__search-form_mobile header__search-form_mobile-active js-mobileSearch">
-          <button class="header__search-btn header__search-btn_mobile" aria-label="Поиск"></button>
-          <input type="search" class="header__search-input header__search-input_mobile">
+        <button
+          class="header__search-btn header__search-btn_mobile header__search-btn_mobile-active js-mobile-search-btn"
+          type="submit" aria-label="Открыть поиск"></button>
+        <form class="header__search-form header__search-form_mobile header__search-form_mobile-active js-mobile-search"
+          action="#">
+          <button class="header__search-btn header__search-btn_mobile" type="submit" aria-label="Поиск"></button>
+          <input class="header__search-input header__search-input_mobile" type="search">
         </form>
       </div>
     </div>
-    <div class="header__container_transparent">
+    <div class="header__container-transparent">
       <div class="container header__container">
-        <div class="header__nav-artist">
-          <div class="header__nav-artist-inner">
-            <button class="header__btn-art js-tabBtnArt"
-                    type="button"
-                    data-path="realism"
-                    tabindex="0"
-                    aria-label="Открыть спискок деятелей искусства">
-              Реализм
-              <span class="header__btn-art-inner">
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1L6 6L1 1" stroke="white"/>
-</svg>
-              </span>
-            </button>
-            <div class="header__list-artist-wrapper js-listArtist" data-target-list="realism">
-              <ul class="header__list-artist list-reset simplebar" data-simplebar>
-                <li class="header__item-artist tintoretto" tabindex="-1">
-                  <a href="#" class="header__link-artist" tabindex="-1">Тинторетто</a>
-                </li>
-                <li class="header__item-artist frederick" tabindex="-1">
-                  <a href="#" class="header__link-artist" tabindex="-1">Фридрих</a>
-                </li>
-                <li class="header__item-artist leonardo" tabindex="-1">
-                  <a href="#" class="header__link-artist" tabindex="-1">Леонардо</a>
-                </li>
-                <li class="header__item-artist verrocchio" tabindex="-1">
-                  <a href="#" class="header__link-artist" tabindex="-1">Верроккьо</a>
-                </li>
-                <li class="header__item-artist tintoretto">
-                  <a href="#" class="header__link-artist">Тинторетто</a>
-                </li>
-                <li class="header__item-artist frederick">
-                  <a href="#" class="header__link-artist">Фридрих</a>
-                </li>
-                <li class="header__item-artist leonardo">
-                  <a href="#" class="header__link-artist">Леонардо</a>
-                </li>
-                <li class="header__item-artist verrocchio">
-                  <a href="#" class="header__link-artist">Верроккьо</a>
-                </li>
-                <li class="header__item-artist tintoretto">
-                  <a href="#" class="header__link-artist">Тинторетто</a>
-                </li>
-                <li class="header__item-artist frederick">
-                  <a href="#" class="header__link-artist">Фридрих</a>
-                </li>
-                <li class="header__item-artist leonardo">
-                  <a href="#" class="header__link-artist">Леонардо</a>
-                </li>
-                <li class="header__item-artist verrocchio">
-                  <a href="#" class="header__link-artist">Верроккьо</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__nav-artist-inner">
-            <button class="header__btn-art js-tabBtnArt"
-                    type="button"
-                    data-path="impressionism"
-                    tabindex="0"
-                    aria-label="Открыть спискок деятелей искусства">
-              Импрессионизм
-              <span class="header__btn-art-inner">
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1L6 6L1 1" stroke="white"/>
-</svg>
-              </span>
-            </button>
-            <div class="header__list-artist-wrapper js-listArtist" data-target-list="impressionism">
-              <ul class="header__list-artist list-reset simplebar" data-simplebar>
-                <li class="header__item-artist monet">
-                  <a href="#" class="header__link-artist">Моне</a>
-                </li>
-                <li class="header__item-artist sisley">
-                  <a href="#" class="header__link-artist">Сислей</a>
-                </li>
-                <li class="header__item-artist manet">
-                  <a href="#" class="header__link-artist">Мане</a>
-                </li>
-                <li class="header__item-artist renoir">
-                  <a href="#" class="header__link-artist">Ренуар</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__nav-artist-inner">
-            <button class="header__btn-art js-tabBtnArt"
-                    type="button"
-                    data-path="post-impressionism"
-                    tabindex="0"
-                    aria-label="Открыть спискок деятелей искусства">
-              Постимпрессионизм
-              <span class="header__btn-art-inner">
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1L6 6L1 1" stroke="white"/>
-</svg>
-              </span>
-            </button>
-            <div class="header__list-artist-wrapper js-listArtist" data-target-list="post-impressionism">
-              <ul class="header__list-artist list-reset simplebar" data-simplebar>
-                <li class="header__item-artist van-gogh">
-                  <a href="#" class="header__link-artist">Ван Гог</a>
-                </li>
-                <li class="header__item-artist cezanne">
-                  <a href="#" class="header__link-artist">Сезанн</a>
-                </li>
-                <li class="header__item-artist gauguin">
-                  <a href="#" class="header__link-artist">Гоген</a>
-                </li>
-                <li class="header__item-artist sulfur">
-                  <a href="#" class="header__link-artist">Сёра</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__nav-artist-inner">
-            <button class="header__btn-art js-tabBtnArt"
-                    type="button"
-                    data-path="vanguard"
-                    tabindex="0"
-                    aria-label="Открыть спискок деятелей искусства">
-              Авангард
-              <span class="header__btn-art-inner">
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1L6 6L1 1" stroke="white"/>
-</svg>
-              </span>
-            </button>
-            <div class="header__list-artist-wrapper js-listArtist" data-target-list="vanguard">
-              <ul class="header__list-artist list-reset simplebar" data-simplebar>
-                <li class="header__item-artist kandinsky">
-                  <a href="#" class="header__link-artist">Кандинский</a>
-                </li>
-                <li class="header__item-artist marinetti">
-                  <a href="#" class="header__link-artist">Маринетти</a>
-                </li>
-                <li class="header__item-artist malevich">
-                  <a href="#" class="header__link-artist">Малевич</a>
-                </li>
-                <li class="header__item-artist picasso">
-                  <a href="#" class="header__link-artist">Пикассо</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__nav-artist-inner">
-            <button class="header__btn-art js-tabBtnArt"
-                    type="button"
-                    data-path="futurism"
-                    tabindex="0"
-                    aria-label="Открыть спискок деятелей искусства">
-              Футуризм
-              <span class="header__btn-art-inner">
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1L6 6L1 1" stroke="white"/>
-</svg>
-              </span>
-            </button>
-            <div class="header__list-artist-wrapper js-listArtist" data-target-list="futurism">
-              <ul class="header__list-artist list-reset simplebar" data-simplebar>
-                <li class="header__item-artist carr">
-                  <a href="#" class="header__link-artist">Карра</a>
-                </li>
-                <li class="header__item-artist pratella">
-                  <a href="#" class="header__link-artist">Прателла</a>
-                </li>
-                <li class="header__item-artist severini">
-                  <a href="#" class="header__link-artist">Северини</a>
-                </li>
-                <li class="header__item-artist score">
-                  <a href="#" class="header__link-artist">Балла</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="header__nav-artist-wrap">
+          <ul class="header__nav-artist list-reset">
+            <li class="header__nav-artist-inner">
+              <button class="header__btn-art js-tab-btn-art" type="button" data-path="realism"
+                aria-label="Открыть список деятелей искусства">
+                Реализм
+                <span class="header__btn-art-inner">
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1" stroke="white"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="header__list-artist-wrapper js-list-artist" data-target-list="realism">
+                <div class="header__simplebar-container simplebar" data-simplebar>
+                  <ul class="header__list-artist list-reset">
+                    <li class="header__item-artist tintoretto">
+                      <a class="header__link-artist" href="#">Тинторетто</a>
+                    </li>
+                    <li class="header__item-artist frederick">
+                      <a class="header__link-artist" href="#">Фридрих</a>
+                    </li>
+                    <li class="header__item-artist leonardo">
+                      <a class="header__link-artist" href="#">Леонардо</a>
+                    </li>
+                    <li class="header__item-artist verrocchio">
+                      <a class="header__link-artist" href="#">Верроккьо</a>
+                    </li>
+                    <li class="header__item-artist tintoretto">
+                      <a class="header__link-artist" href="#">Тинторетто</a>
+                    </li>
+                    <li class="header__item-artist frederick">
+                      <a class="header__link-artist" href="#">Фридрих</a>
+                    </li>
+                    <li class="header__item-artist leonardo">
+                      <a class="header__link-artist" href="#">Леонардо</a>
+                    </li>
+                    <li class="header__item-artist verrocchio">
+                      <a class="header__link-artist" href="#">Верроккьо</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-artist-inner">
+              <button class="header__btn-art js-tab-btn-art" type="button" data-path="impressionism"
+                aria-label="Открыть список деятелей искусства">
+                Импрессионизм
+                <span class="header__btn-art-inner">
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1" stroke="white"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="header__list-artist-wrapper js-list-artist" data-target-list="impressionism">
+                <div class="header__simplebar-container simplebar" data-simplebar>
+                  <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                    <li class="header__item-artist monet">
+                      <a class="header__link-artist" href="#">Моне</a>
+                    </li>
+                    <li class="header__item-artist sisley">
+                      <a class="header__link-artist" href="#">Сислей</a>
+                    </li>
+                    <li class="header__item-artist manet">
+                      <a class="header__link-artist" href="#">Мане</a>
+                    </li>
+                    <li class="header__item-artist renoir">
+                      <a class="header__link-artist" href="#">Ренуар</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-artist-inner">
+              <button class="header__btn-art js-tab-btn-art" type="button" data-path="post-impressionism"
+                aria-label="Открыть список деятелей искусства">
+                Постимпрессионизм
+                <span class="header__btn-art-inner">
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1" stroke="white"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="header__list-artist-wrapper js-list-artist" data-target-list="post-impressionism">
+                <div class="header__simplebar-container simplebar" data-simplebar>
+                  <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                    <li class="header__item-artist van-gogh">
+                      <a class="header__link-artist" href="#">Ван Гог</a>
+                    </li>
+                    <li class="header__item-artist cezanne">
+                      <a class="header__link-artist" href="#">Сезанн</a>
+                    </li>
+                    <li class="header__item-artist gauguin">
+                      <a class="header__link-artist" href="#">Гоген</a>
+                    </li>
+                    <li class="header__item-artist sulfur">
+                      <a class="header__link-artist" href="#">Сёра</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-artist-inner">
+              <button class="header__btn-art js-tab-btn-art" type="button" data-path="vanguard"
+                aria-label="Открыть список деятелей искусства">
+                Авангард
+                <span class="header__btn-art-inner">
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1" stroke="white"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="header__list-artist-wrapper js-list-artist" data-target-list="vanguard">
+                <div class="header__simplebar-container simplebar" data-simplebar>
+                  <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                    <li class="header__item-artist kandinsky">
+                      <a class="header__link-artist" href="#">Кандинский</a>
+                    </li>
+                    <li class="header__item-artist marinetti">
+                      <a class="header__link-artist" href="#">Маринетти</a>
+                    </li>
+                    <li class="header__item-artist malevich">
+                      <a class="header__link-artist" href="#">Малевич</a>
+                    </li>
+                    <li class="header__item-artist picasso">
+                      <a class="header__link-artist" href="#">Пикассо</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-artist-inner">
+              <button class="header__btn-art js-tab-btn-art" type="button" data-path="futurism"
+                aria-label="Открыть список деятелей искусства">
+                Футуризм
+                <span class="header__btn-art-inner">
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1" stroke="white"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="header__list-artist-wrapper js-list-artist" data-target-list="futurism">
+                <div class="header__simplebar-container simplebar" data-simplebar>
+                  <ul class="header__list-artist list-reset simplebar" data-simplebar>
+                    <li class="header__item-artist carr">
+                      <a class="header__link-artist" href="#">Карра</a>
+                    </li>
+                    <li class="header__item-artist pratella">
+                      <a class="header__link-artist" href="#">Прателла</a>
+                    </li>
+                    <li class="header__item-artist severini">
+                      <a class="header__link-artist" href="#">Северини</a>
+                    </li>
+                    <li class="header__item-artist score">
+                      <a class="header__link-artist" href="#">Балла</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <form action="#" class="header__search-form">
-          <button class="header__search-btn header__search-btn_desktop" type="submit" aria-label="Поиск"></button>
-          <input type="search" class="header__search-input header__search-input_desktop" placeholder="Поиск по сайту">
+        <form class="header__search-form" action="#">
+          <button class="header__search-btn header__search-btn_desktop" type="submit" aria-label="Поиск">
+            <svg width="20" height="20" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white"></path>
+            </svg>
+
+          </button>
+          <input class="header__search-input header__search-input_desktop" type="search" placeholder="Поиск по сайту">
         </form>
       </div>
     </div>
@@ -265,9 +274,17 @@
 
   <main class="main">
     <section class="section-hero">
-      <div class="section-hero__background">
+      <div class="container section-hero__container">
+        <h2 class="section-hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
+        <p class="section-hero__lead">
+          Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+          для новых предложений.
+        </p>
+        <a class="section-hero__link-sub" href="#">Подписаться на рассылку</a>
+      </div>
+      <div class="section-hero__swiper-slider">
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="section-hero__swiper-container js-slider-hero">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -283,21 +300,952 @@
           </div>
         </div>
       </div>
-      <div class="container section-hero__container">
-        <h2 class="section-hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
-        <p class="section-hero__lead">
-          Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
-        </p>
-        <a href="#" class="section-hero__link-sub">Подписаться на рассылку</a>
-      </div>
     </section>
 
-    <section id="about-us" class="section-us">
+    <section class="section-us" id="about-us">
       <div class="container">
         <h2 class="title section-us__title">О нас</h2>
         <p class="section-us__description">
-          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
+          за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
         </p>
+      </div>
+    </section>
+
+    <section class="section-gallery">
+      <div class="container section-gallery__container">
+        <div class="section-gallery__wrap">
+          <div class="section-gallery__wrap-filter">
+            <h2 class="title section-gallery__title">Галерея</h2>
+            <form class="section-gallery__form" action="#">
+              <fieldset class="section-gallery__form-wrap">
+                <legend class="section-gallery__form-title">Фильтр:</legend>
+                <select class="section-gallery__select js-select-art" aria-label="Выбор направления искусства">
+                  <option value="painting">Живопись</option>
+                  <option value="drawing">Рисунок</option>
+                  <option value="sculpture">Скульптура</option>
+                </select>
+              </fieldset>
+            </form>
+          </div>
+          <p class="section-gallery__description">
+            Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний
+            <a class="section-gallery__link-authorization" href="#">авторизуйтесь,</a> либо
+            воспользуйтесь&nbsp;лицензией.
+          </p>
+        </div>
+        <!-- Slider main container -->
+        <div
+          class="section-gallery__swiper-container section-gallery__swiper-container_painting js-slider-gallery-painting js-slider-gallery"
+          data-target-slider="painting">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit" data-path-slider="slider-1"
+                aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img1.avif 1x,
+																																					 ./img/main/gallery/320/painting/img1@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img1.webp 1x,
+																																					 ./img/main/gallery/320/painting/img1@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img1.jpg 1x,
+																												 ./img/main/gallery/320/painting/img1@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img1.avif 1x,
+																																					 ./img/main/gallery/768/painting/img1@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img1.webp 1x,
+																																					 ./img/main/gallery/768/painting/img1@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img1.jpg 1x,
+																												 ./img/main/gallery/768/painting/img1@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img1.avif 1x,
+																																						./img/main/gallery/1024/painting/img1@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img1.webp 1x,
+																																						./img/main/gallery/1024/painting/img1@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img1.jpg 1x,
+																													./img/main/gallery/1024/painting/img1@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img1.avif 1x,
+																								./img/main/gallery/1920/painting/img1@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img1.webp 1x,
+																								./img/main/gallery/1920/painting/img1@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img1.jpg"
+                    srcset="./img/main/gallery/1920/painting/img1@2x.jpg 2x" alt="Казимир Малевич - Женщина с граблями">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img2.avif 1x,
+																																					 ./img/main/gallery/320/painting/img2@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img2.webp 1x,
+																																					 ./img/main/gallery/320/painting/img2@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img2.jpg 1x,
+																												 ./img/main/gallery/320/painting/img2@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img2.avif 1x,
+																																					 ./img/main/gallery/768/painting/img2@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img2.webp 1x,
+																																					 ./img/main/gallery/768/painting/img2@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img2.jpg 1x,
+																												 ./img/main/gallery/768/painting/img2@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img2.avif 1x,
+																																						./img/main/gallery/1024/painting/img2@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img2.webp 1x,
+																																						./img/main/gallery/1024/painting/img2@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img2.jpg 1x,
+																													./img/main/gallery/1024/painting/img2@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img2.avif 1x,
+																								./img/main/gallery/1920/painting/img2@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img2.webp 1x,
+																								./img/main/gallery/1920/painting/img2@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img2.jpg"
+                    srcset="./img/main/gallery/1920/painting/img2@2x.jpg 2x" alt="картина №2">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img3.avif 1x,
+																																					 ./img/main/gallery/320/painting/img3@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img3.webp 1x,
+																																					 ./img/main/gallery/320/painting/img3@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img3.jpg 1x,
+																												 ./img/main/gallery/320/painting/img3@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img3.avif 1x,
+																																					 ./img/main/gallery/768/painting/img3@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img3.webp 1x,
+																																					 ./img/main/gallery/768/painting/img3@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img3.jpg 1x,
+																												 ./img/main/gallery/768/painting/img3@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img3.avif 1x,
+																																						./img/main/gallery/1024/painting/img3@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img3.webp 1x,
+																																						./img/main/gallery/1024/painting/img3@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img3.jpg 1x,
+																													./img/main/gallery/1024/painting/img3@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img3.avif 1x,
+																								./img/main/gallery/1920/painting/img3@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img3.webp 1x,
+																								./img/main/gallery/1920/painting/img3@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img3.jpg"
+                    srcset="./img/main/gallery/1920/painting/img3@2x.jpg 2x" alt="картина №3">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img4.avif 1x,
+																																					 ./img/main/gallery/320/painting/img4@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img4.webp 1x,
+																																					 ./img/main/gallery/320/painting/img4@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img4.jpg 1x,
+																												 ./img/main/gallery/320/painting/img4@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img4.avif 1x,
+																																					 ./img/main/gallery/768/painting/img4@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img4.webp 1x,
+																																					 ./img/main/gallery/768/painting/img4@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img4.jpg 1x,
+																												 ./img/main/gallery/768/painting/img4@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img4.avif 1x,
+																																						./img/main/gallery/1024/painting/img4@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img4.webp 1x,
+																																						./img/main/gallery/1024/painting/img4@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img4.jpg 1x,
+																													./img/main/gallery/1024/painting/img4@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img4.avif 1x,
+																								./img/main/gallery/1920/painting/img4@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img4.webp 1x,
+																								./img/main/gallery/1920/painting/img4@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img4.jpg"
+                    srcset="./img/main/gallery/1920/painting/img4@2x.jpg 2x" alt="картина №4">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img5.avif 1x,
+																																					 ./img/main/gallery/320/painting/img5@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img5.webp 1x,
+																																					./img/main/gallery/320/painting/img5@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img5.jpg 1x,
+																												 ./img/main/gallery/320/painting/img5@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img5.avif 1x,
+																																					 ./img/main/gallery/768/painting/img5@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img5.webp 1x,
+																																					 ./img/main/gallery/768/painting/img5@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img5.jpg 1x,
+																												 ./img/main/gallery/768/painting/img5@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img5.avif 1x,
+																																						./img/main/gallery/1024/painting/img5@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img5.webp 1x,
+																																						./img/main/gallery/1024/painting/img5@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img5.jpg 1x,
+																													./img/main/gallery/1024/painting/img5@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img5.avif 1x,
+																								./img/main/gallery/1920/painting/img5@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img5.webp 1x,
+																								./img/main/gallery/1920/painting/img5@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img5.jpg"
+                    srcset="./img/main/gallery/1920/painting/img5@2x.jpg 2x" alt="картина №5">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img6.avif 1x,
+																																					 ./img/main/gallery/320/painting/img6@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img6.webp 1x,
+																																					 ./img/main/gallery/320/painting/img6@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img6.jpg 1x,
+																												 ./img/main/gallery/320/painting/img6@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img6.avif 1x,
+																																					 ./img/main/gallery/768/painting/img6@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img6.webp 1x,
+																																					 ./img/main/gallery/768/painting/img6@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img6.jpg 1x,
+																												 ./img/main/gallery/768/painting/img6@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img6.avif 1x,
+																																						./img/main/gallery/1024/painting/img6@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img6.webp 1x,
+																																						./img/main/gallery/1024/painting/img6@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img6.jpg 1x,
+																													./img/main/gallery/1024/painting/img6@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img6.avif 1x,
+																								./img/main/gallery/1920/painting/img6@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img6.webp 1x,
+																								./img/main/gallery/1920/painting/img6@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img6.jpg"
+                    srcset="./img/main/gallery/1920/painting/img6@2x.jpg 2x" alt="картина №6">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img7.avif 1x,
+																																					 ./img/main/gallery/320/painting/img7@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img7.webp 1x,
+																																					 ./img/main/gallery/320/painting/img7@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img7.jpg 1x,
+																												 ./img/main/gallery/320/painting/img7@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img7.avif 1x,
+																																					 ./img/main/gallery/768/painting/img7@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img7.webp 1x,
+																																					 ./img/main/gallery/768/painting/img7@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img7.jpg 1x,
+																												 ./img/main/gallery/768/painting/img7@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img7.avif 1x,
+																																						./img/main/gallery/1024/painting/img7@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img7.webp 1x,
+																																						./img/main/gallery/1024/painting/img7@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img7.jpg 1x,
+																													./img/main/gallery/1024/painting/img7@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img7.avif 1x,
+																								./img/main/gallery/1920/painting/img7@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img7.webp 1x,
+																								./img/main/gallery/1920/painting/img7@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img7.jpg"
+                    srcset="./img/main/gallery/1920/painting/img7@2x.jpg 2x" alt="картина №7">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img8.avif 1x,
+																																					 ./img/main/gallery/320/painting/img8@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img8.webp 1x,
+																																					 ./img/main/gallery/320/painting/img8@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img8.jpg 1x,
+																												 ./img/main/gallery/320/painting/img8@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img8.avif 1x,
+																																					 ./img/main/gallery/768/painting/img8@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img8.webp 1x,
+																																					 ./img/main/gallery/768/painting/img8@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img8.jpg 1x,
+																												 ./img/main/gallery/768/painting/img8@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img8.avif 1x,
+																																						./img/main/gallery/1024/painting/img8@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img8.webp 1x,
+																																						./img/main/gallery/1024/painting/img8@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img8.jpg 1x,
+																													./img/main/gallery/1024/painting/img8@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img8.avif 1x,
+																								./img/main/gallery/1920/painting/img8@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img8.webp 1x,
+																								./img/main/gallery/1920/painting/img8@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img8.jpg"
+                    srcset="./img/main/gallery/1920/painting/img8@2x.jpg 2x" alt="картина №8">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img9.avif 1x,
+																																					 ./img/main/gallery/320/painting/img9@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img9.webp 1x,
+																																					 ./img/main/gallery/320/painting/img9@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img9.jpg 1x,
+																												 ./img/main/gallery/320/painting/img9@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img9.avif 1x,
+																																					 ./img/main/gallery/768/painting/img9@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img9.webp 1x,
+																																					 ./img/main/gallery/768/painting/img9@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img9.jpg 1x,
+																												 ./img/main/gallery/768/painting/img9@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img9.avif 1x,
+																																						./img/main/gallery/1024/painting/img9@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img9.webp 1x,
+																																						./img/main/gallery/1024/painting/img9@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img9.jpg 1x,
+																													./img/main/gallery/1024/painting/img9@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img9.avif 1x,
+																								./img/main/gallery/1920/painting/img9@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img9.webp 1x,
+																								./img/main/gallery/1920/painting/img9@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img9.jpg"
+                    srcset="./img/main/gallery/1920/painting/img9@2x.jpg 2x" alt="Казимир Малевич - Женщина с граблями">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img10.avif 1x,
+																																					 ./img/main/gallery/320/painting/img10@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img10.webp 1x,
+																																					 ./img/main/gallery/320/painting/img10@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img10.jpg 1x,
+																												 ./img/main/gallery/320/painting/img10@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img10.avif 1x,
+																																					 ./img/main/gallery/768/painting/img10@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img10.webp 1x,
+																																					 ./img/main/gallery/768/painting/img10@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img10.jpg 1x,
+																												 ./img/main/gallery/768/painting/img10@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img10.avif 1x,
+																																						./img/main/gallery/1024/painting/img10@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img10.webp 1x,
+																																						./img/main/gallery/1024/painting/img10@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img10.jpg 1x,
+																													./img/main/gallery/1024/painting/img10@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img10.avif 1x,
+																								./img/main/gallery/1920/painting/img10@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img10.webp 1x,
+																								./img/main/gallery/1920/painting/img10@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img10.jpg"
+                    srcset="./img/main/gallery/1920/painting/img10@2x.jpg 2x" alt="картина №10">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img11.avif 1x,
+																																					 ./img/main/gallery/320/painting/img11@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img11.webp 1x,
+																																					 ./img/main/gallery/320/painting/img11@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img11.jpg 1x,
+																												 ./img/main/gallery/320/painting/img11@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img11.avif 1x,
+																																					 ./img/main/gallery/768/painting/img11@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img11.webp 1x,
+																																					 ./img/main/gallery/768/painting/img11@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img11.jpg 1x,
+																												 ./img/main/gallery/768/painting/img11@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img11.avif 1x,
+																																						./img/main/gallery/1024/painting/img11@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img11.webp 1x,
+																																						./img/main/gallery/1024/painting/img11@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img11.jpg 1x,
+																													./img/main/gallery/1024/painting/img11@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img11.avif 1x,
+																								./img/main/gallery/1920/painting/img11@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img11.webp 1x,
+																								./img/main/gallery/1920/painting/img11@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img11.jpg"
+                    srcset="./img/main/gallery/1920/painting/img11@2x.jpg 2x" alt="картина №11">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/painting/img12.avif 1x,
+																																					 ./img/main/gallery/320/painting/img12@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/painting/img12.webp 1x,
+																																					 ./img/main/gallery/320/painting/img12@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/painting/img12.jpg 1x,
+																												 ./img/main/gallery/320/painting/img12@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/painting/img12.avif 1x,
+																																					 ./img/main/gallery/768/painting/img12@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/painting/img12.webp 1x,
+																																					 ./img/main/gallery/768/painting/img12@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/painting/img12.jpg 1x,
+																												 ./img/main/gallery/768/painting/img12@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/painting/img12.avif 1x,
+																																						./img/main/gallery/1024/painting/img12@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/painting/img12.webp 1x,
+																																						./img/main/gallery/1024/painting/img12@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/painting/img12.jpg 1x,
+																													./img/main/gallery/1024/painting/img12@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/painting/img12.avif 1x,
+																								./img/main/gallery/1920/painting/img12@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/painting/img12.webp 1x,
+																								./img/main/gallery/1920/painting/img12@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/painting/img12.jpg"
+                    srcset="./img/main/gallery/1920/painting/img12@2x.jpg 2x" alt="картина №12">
+                </picture>
+              </button>
+            </div>
+          </div>
+          <div class="section-gallery__btn-next swiper-button-next js-gallery-pagination-btn">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+            </svg>
+          </div>
+          <div class="section-gallery__btn-prev swiper-button-prev js-gallery-pagination-btn">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+            </svg>
+          </div>
+          <div class="section-gallery__pagination swiper-pagination"></div>
+        </div>
+        <div
+          class="section-gallery__swiper-container section-gallery__swiper-container_drawing js-slider-gallery-drawing js-slider-gallery"
+          data-target-slider="drawing">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/drawing/img1.avif 1x,
+																																						 ./img/main/gallery/320/drawing/img1@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/drawing/img1.webp 1x,
+																																						 ./img/main/gallery/320/drawing/img1@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/drawing/img1.jpg 1x,
+																													 ./img/main/gallery/320/drawing/img1@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/drawing/img1.avif 1x,
+																																						 ./img/main/gallery/768/drawing/img1@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/drawing/img1.webp 1x,
+																																						 ./img/main/gallery/768/drawing/img1@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/drawing/img1.jpg 1x,
+																													 ./img/main/gallery/768/drawing/img1@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/drawing/img1.avif 1x,
+																																							./img/main/gallery/1024/drawing/img1@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/drawing/img1.webp 1x,
+																																							./img/main/gallery/1024/drawing/img1@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/drawing/img1.jpg 1x,
+																														./img/main/gallery/1024/drawing/img1@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/drawing/img1.avif 1x,
+																									./img/main/gallery/1920/drawing/img1@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/drawing/img1.webp 1x,
+																									./img/main/gallery/1920/drawing/img1@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/drawing/img1.jpg"
+                    srcset="./img/main/gallery/1920/drawing/img1@2x.jpg 2x" alt="рисунок №1">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/drawing/img2.avif 1x,
+																																						 ./img/main/gallery/320/drawing/img2@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/drawing/img2.webp 1x,
+																																						 ./img/main/gallery/320/drawing/img2@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/drawing/img2.jpg 1x,
+																													 ./img/main/gallery/320/drawing/img2@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/drawing/img2.avif 1x,
+																																						 ./img/main/gallery/768/drawing/img2@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/drawing/img2.webp 1x,
+																																						 ./img/main/gallery/768/drawing/img2@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/drawing/img2.jpg 1x,
+																													 ./img/main/gallery/768/drawing/img2@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/drawing/img2.avif 1x,
+																																							./img/main/gallery/1024/drawing/img2@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/drawing/img2.webp 1x,
+																																							./img/main/gallery/1024/drawing/img2@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/drawing/img2.jpg 1x,
+																														./img/main/gallery/1024/drawing/img2@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/drawing/img2.avif 1x,
+																									./img/main/gallery/1920/drawing/img2@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/drawing/img2.webp 1x,
+																									./img/main/gallery/1920/drawing/img2@2x.webp 2x">
+                  <img class="section-gallery__slid-img" src="./img/main/gallery/1920/drawing/img2.jpg"
+                    srcset="./img/main/gallery/1920/drawing/img2@2x.jpg 2x" alt="рисунок №2">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/drawing/img3.avif 1x,
+																																						 ./img/main/gallery/320/drawing/img3@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/drawing/img3.webp 1x,
+																																						 ./img/main/gallery/320/drawing/img3@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/drawing/img3.jpg 1x,
+																													 ./img/main/gallery/320/drawing/img3@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/drawing/img3.avif 1x,
+																																						 ./img/main/gallery/768/drawing/img3@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/drawing/img3.webp 1x,
+																																						 ./img/main/gallery/768/drawing/img3@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/drawing/img3.jpg 1x,
+																													 ./img/main/gallery/768/drawing/img3@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/drawing/img3.avif 1x,
+																																							./img/main/gallery/1024/drawing/img3@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/drawing/img3.webp 1x,
+																																							./img/main/gallery/1024/drawing/img3@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/drawing/img3.jpg 1x,
+																														./img/main/gallery/1024/drawing/img3@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/drawing/img3.avif 1x,
+																									./img/main/gallery/1920/drawing/img3@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/drawing/img3.webp 1x,
+																									./img/main/gallery/1920/drawing/img3@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/drawing/img3.jpg"
+                    srcset="./img/main/gallery/1920/drawing/img3@2x.jpg 2x" alt="рисунок №3">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/drawing/img4.avif 1x,
+																																						 ./img/main/gallery/320/drawing/img4@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/drawing/img4.webp 1x,
+																																						 ./img/main/gallery/320/drawing/img4@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/drawing/img4.jpg 1x,
+																													 ./img/main/gallery/320/drawing/img4@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/drawing/img4.avif 1x,
+																																						 ./img/main/gallery/768/drawing/img4@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/drawing/img4.webp 1x,
+																																						 ./img/main/gallery/768/drawing/img4@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/drawing/img4.jpg 1x,
+																													 ./img/main/gallery/768/drawing/img4@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/drawing/img4.avif 1x,
+																																							./img/main/gallery/1024/drawing/img4@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/drawing/img4.webp 1x,
+																																							./img/main/gallery/1024/drawing/img4@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/drawing/img4.jpg 1x,
+																														./img/main/gallery/1024/drawing/img4@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/drawing/img4.avif 1x,
+																									./img/main/gallery/1920/drawing/img4@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/drawing/img4.webp 1x,
+																									./img/main/gallery/1920/drawing/img4@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/drawing/img4.jpg"
+                    srcset="./img/main/gallery/1920/drawing/img4@2x.jpg 2x" alt="рисунок №4">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/drawing/img5.avif 1x,
+																																						 ./img/main/gallery/320/drawing/img5@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/drawing/img5.webp 1x,
+																																						 ./img/main/gallery/320/drawing/img5@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/drawing/img5.jpg 1x,
+																													 ./img/main/gallery/320/drawing/img5@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/drawing/img5.avif 1x,
+																																						 ./img/main/gallery/768/drawing/img5@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/drawing/img5.webp 1x,
+																																						 ./img/main/gallery/768/drawing/img5@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/drawing/img5.jpg 1x,
+																													 ./img/main/gallery/768/drawing/img5@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/drawing/img5.avif 1x,
+																																							./img/main/gallery/1024/drawing/img5@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/drawing/img5.webp 1x,
+																																							./img/main/gallery/1024/drawing/img5@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/drawing/img5.jpg 1x,
+																														./img/main/gallery/1024/drawing/img5@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/drawing/img5.avif 1x,
+																									./img/main/gallery/1920/drawing/img5@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/drawing/img5.webp 1x,
+																									./img/main/gallery/1920/drawing/img5@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/drawing/img5.jpg"
+                    srcset="./img/main/gallery/1920/drawing/img5@2x.jpg 2x" alt="рисунок №5">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/drawing/img6.avif 1x,
+																																						 ./img/main/gallery/320/drawing/img6@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/drawing/img6.webp 1x,
+																																						 ./img/main/gallery/320/drawing/img6@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/drawing/img6.jpg 1x,
+																													 ./img/main/gallery/320/drawing/img6@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/drawing/img6.avif 1x,
+																																						 ./img/main/gallery/768/drawing/img6@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/drawing/img6.webp 1x,
+																																						 ./img/main/gallery/768/drawing/img6@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/drawing/img6.jpg 1x,
+																													 ./img/main/gallery/768/drawing/img6@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/drawing/img6.avif 1x,
+																																							./img/main/gallery/1024/drawing/img6@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/drawing/img6.webp 1x,
+																																							./img/main/gallery/1024/drawing/img6@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/drawing/img6.jpg 1x,
+																														./img/main/gallery/1024/drawing/img6@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/drawing/img6.avif 1x,
+																									./img/main/gallery/1920/drawing/img6@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/drawing/img6.webp 1x,
+																									./img/main/gallery/1920/drawing/img6@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/drawing/img6.jpg"
+                    srcset="./img/main/gallery/1920/drawing/img6@2x.jpg 2x" alt="рисунок №6">
+                </picture>
+              </button>
+            </div>
+          </div>
+          <div class="section-gallery__btn-next swiper-button-next js-gallery-pagination-btn">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+            </svg>
+          </div>
+          <div class="section-gallery__btn-prev swiper-button-prev js-gallery-pagination-btn">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+            </svg>
+          </div>
+          <div class="section-gallery__pagination swiper-pagination"></div>
+        </div>
+        <div
+          class="section-gallery__swiper-container section-gallery__swiper-container_sculpture js-slider-gallery-sculpture js-slider-gallery"
+          data-target-slider="sculpture">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/sculpture/img1.avif 1x,
+																																						 ./img/main/gallery/320/sculpture/img1@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/sculpture/img1.webp 1x,
+																																						 ./img/main/gallery/320/sculpture/img1@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/sculpture/img1.jpg 1x,
+																													 ./img/main/gallery/320/sculpture/img1@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/sculpture/img1.avif 1x,
+																																						 ./img/main/gallery/768/sculpture/img1@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/sculpture/img1.webp 1x,
+																																						 ./img/main/gallery/768/sculpture/img1@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/sculpture/img1.jpg 1x,
+																													 ./img/main/gallery/768/sculpture/img1@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/sculpture/img1.avif 1x,
+																																							./img/main/gallery/1024/sculpture/img1@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/sculpture/img1.webp 1x,
+																																							./img/main/gallery/1024/sculpture/img1@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/sculpture/img1.jpg 1x,
+																														./img/main/gallery/1024/sculpture/img1@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/sculpture/img1.avif 1x,
+																									./img/main/gallery/1920/sculpture/img1@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/sculpture/img1.webp 1x,
+																									./img/main/gallery/1920/sculpture/img1@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/sculpture/img1.jpg"
+                    srcset="./img/main/gallery/1920/sculpture/img1@2x.jpg 2x" alt="Скульптура №1">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/sculpture/img2.avif 1x,
+																																						 ./img/main/gallery/320/sculpture/img2@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/sculpture/img2.webp 1x,
+																																						 ./img/main/gallery/320/sculpture/img2@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/sculpture/img2.jpg 1x,
+																													 ./img/main/gallery/320/sculpture/img2@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/sculpture/img2.avif 1x,
+																																						 ./img/main/gallery/768/sculpture/img2@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/sculpture/img2.webp 1x,
+																																						 ./img/main/gallery/768/sculpture/img2@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/sculpture/img2.jpg 1x,
+																													 ./img/main/gallery/768/sculpture/img2@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/sculpture/img2.avif 1x,
+																																							./img/main/gallery/1024/sculpture/img2@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/sculpture/img2.webp 1x,
+																																							./img/main/gallery/1024/sculpture/img2@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/sculpture/img2.jpg 1x,
+																														./img/main/gallery/1024/sculpture/img2@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/sculpture/img2.avif 1x,
+																									./img/main/gallery/1920/sculpture/img2@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/sculpture/img2.webp 1x,
+																									./img/main/gallery/1920/sculpture/img2@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/sculpture/img2.jpg"
+                    srcset="./img/main/gallery/1920/sculpture/img2@2x.jpg 2x" alt="Скульптура №2">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/sculpture/img3.avif 1x,
+																																						 ./img/main/gallery/320/sculpture/img3@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/sculpture/img3.webp 1x,
+																																						 ./img/main/gallery/320/sculpture/img3@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/sculpture/img3.jpg 1x,
+																													 ./img/main/gallery/320/sculpture/img3@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/sculpture/img3.avif 1x,
+																																						 ./img/main/gallery/768/sculpture/img3@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/sculpture/img3.webp 1x,
+																																						 ./img/main/gallery/768/sculpture/img3@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/sculpture/img3.jpg 1x,
+																													 ./img/main/gallery/768/sculpture/img3@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/sculpture/img3.avif 1x,
+																																							./img/main/gallery/1024/sculpture/img3@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/sculpture/img3.webp 1x,
+																																							./img/main/gallery/1024/sculpture/img3@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/sculpture/img3.jpg 1x,
+																														./img/main/gallery/1024/sculpture/img3@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/sculpture/img3.avif 1x,
+																									./img/main/gallery/1920/sculpture/img3@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/sculpture/img3.webp 1x,
+																									./img/main/gallery/1920/sculpture/img3@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/sculpture/img3.jpg"
+                    srcset="./img/main/gallery/1920/sculpture/img3@2x.jpg 2x" alt="Скульптура №3">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/sculpture/img4.avif 1x,
+																																						 ./img/main/gallery/320/sculpture/img4@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/sculpture/img4.webp 1x,
+																																						 ./img/main/gallery/320/sculpture/img4@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/sculpture/img4.jpg 1x,
+																													 ./img/main/gallery/320/sculpture/img4@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/sculpture/img4.avif 1x,
+																																						 ./img/main/gallery/768/sculpture/img4@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/sculpture/img4.webp 1x,
+																																						 ./img/main/gallery/768/sculpture/img4@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/sculpture/img4.jpg 1x,
+																													 ./img/main/gallery/768/sculpture/img4@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/sculpture/img4.avif 1x,
+																																							./img/main/gallery/1024/sculpture/img4@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/sculpture/img4.webp 1x,
+																																							./img/main/gallery/1024/sculpture/img4@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/sculpture/img4.jpg 1x,
+																														./img/main/gallery/1024/sculpture/img4@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/sculpture/img4.avif 1x,
+																									./img/main/gallery/1920/sculpture/img4@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/sculpture/img4.webp 1x,
+																									./img/main/gallery/1920/sculpture/img4@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/sculpture/img4.jpg"
+                    srcset="./img/main/gallery/1920/sculpture/img4@2x.jpg 2x" alt="Скульптура №4">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/sculpture/img5.avif 1x,
+																																						 ./img/main/gallery/320/sculpture/img5@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/sculpture/img5.webp 1x,
+																																						 ./img/main/gallery/320/sculpture/img5@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/sculpture/img5.jpg 1x,
+																													 ./img/main/gallery/320/sculpture/img5@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/sculpture/img5.avif 1x,
+																																						 ./img/main/gallery/768/sculpture/img5@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/sculpture/img5.webp 1x,
+																																						 ./img/main/gallery/768/sculpture/img5@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/sculpture/img5.jpg 1x,
+																													 ./img/main/gallery/768/sculpture/img5@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/sculpture/img5.avif 1x,
+																																							./img/main/gallery/1024/sculpture/img5@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/sculpture/img5.webp 1x,
+																																							./img/main/gallery/1024/sculpture/img5@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/sculpture/img5.jpg 1x,
+																														./img/main/gallery/1024/sculpture/img5@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/sculpture/img5.avif 1x,
+																									./img/main/gallery/1920/sculpture/img5@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/sculpture/img5.webp 1x,
+																									./img/main/gallery/1920/sculpture/img5@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/sculpture/img5.jpg"
+                    srcset="./img/main/gallery/1920/sculpture/img5@2x.jpg 2x" alt="Скульптура №5">
+                </picture>
+              </button>
+            </div>
+            <div class="swiper-slide section-gallery__slide">
+              <button class="section-gallery__slide-btn js-gallery-slide-btn" type="submit"
+                data-path-slider="slider-placeholder" aria-label="открыть описание">
+                <picture>
+                  <source media="(max-width: 661px)" type="image/avif" srcset="./img/main/gallery/320/sculpture/img6.avif 1x,
+																																						 ./img/main/gallery/320/sculpture/img6@2x.avif 2x">
+                  <source media="(max-width: 661px)" type="image/webp" srcset="./img/main/gallery/320/sculpture/img6.webp 1x,
+																																							./img/main/gallery/320/sculpture/img6@2x.webp 2x">
+                  <source media="(max-width: 661px)" srcset="./img/main/gallery/320/sculpture/img6.jpg 1x,
+																													 	./img/main/gallery/320/sculpture/img6@2x.jpg 2x">
+                  <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/768/sculpture/img6.avif 1x,
+																																						 ./img/main/gallery/768/sculpture/img6@2x.avif 2x">
+                  <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/768/sculpture/img6.webp 1x,
+																																						 ./img/main/gallery/768/sculpture/img6@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="./img/main/gallery/768/sculpture/img6.jpg 1x,
+																													 ./img/main/gallery/768/sculpture/img6@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/1024/sculpture/img6.avif 1x,
+																																							./img/main/gallery/1024/sculpture/img6@2x.avif 2x">
+                  <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/1024/sculpture/img6.webp 1x,
+																																							./img/main/gallery/1024/sculpture/img6@2x.webp 2x">
+                  <source media="(max-width: 1024px)" srcset="./img/main/gallery/1024/sculpture/img6.jpg 1x,
+																														./img/main/gallery/1024/sculpture/img6@2x.jpg 2x">
+                  <source type="image/avif" srcset="./img/main/gallery/1920/sculpture/img6.avif 1x,
+																									./img/main/gallery/1920/sculpture/img6@2x.avif 2x">
+                  <source type="image/webp" srcset="./img/main/gallery/1920/sculpture/img6.webp 1x,
+																									./img/main/gallery/1920/sculpture/img6@2x.webp 2x">
+                  <img class="section-gallery__slide-img" src="./img/main/gallery/1920/sculpture/img6.jpg"
+                    srcset="./img/main/gallery/1920/sculpture/img6@2x.jpg 2x" alt="Скульптура №6">
+                </picture>
+              </button>
+            </div>
+          </div>
+          <div class="section-gallery__btn-next swiper-button-next js-gallery-pagination-btn">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+            </svg>
+          </div>
+          <div class="section-gallery__btn-prev swiper-button-prev js-gallery-pagination-btn">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+            </svg>
+          </div>
+          <div class="section-gallery__pagination swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section-gallery__modals modals">
+        <div class="modals__overlay js-modal-overlay-gallery">
+          <article class="modals__slider js-modal-slider" data-target-modal="slider-1">
+            <picture>
+              <source media="(max-width: 480px)" type="image/avif" srcset="./img/main/gallery/modals/320/modal_slide-1.avif 1x,
+																																						./img/main/gallery/modals/320/modal_slide-1@2x.avif 2x">
+              <source media="(max-width: 480px)" type="image/webp" srcset="./img/main/gallery/modals/320/modal_slide-1.webp 1x,
+																																						./img/main/gallery/modals/320/modal_slide-1@2x.webp 2x">
+              <source media="(max-width: 480px)" srcset="./img/main/gallery/modals/320/modal_slide-1.jpg 1x,
+																												 ./img/main/gallery/modals/320/modal_slide-1@2x.jpg 2x">
+              <source media="(max-width: 768px)" type="image/avif" srcset="./img/main/gallery/modals/768/modal_slide-1.avif 1x,
+																																						./img/main/gallery/modals/768/modal_slide-1@2x.avif 2x">
+              <source media="(max-width: 768px)" type="image/webp" srcset="./img/main/gallery/modals/768/modal_slide-1.webp 1x,
+																																						./img/main/gallery/modals/768/modal_slide-1@2x.webp 2x">
+              <source media="(max-width: 768px)" srcset="./img/main/gallery/modals/768/modal_slide-1.jpg 1x,
+																												 ./img/main/gallery/modals/768/modal_slide-1@2x.jpg 2x">
+              <source media="(max-width: 1024px)" type="image/avif" srcset="./img/main/gallery/modals/1024/modal_slide-1.avif 1x,
+																																						./img/main/gallery/modals/1024/modal_slide-1@2x.avif 2x">
+              <source media="(max-width: 1024px)" type="image/webp" srcset="./img/main/gallery/modals/1024/modal_slide-1.webp 1x,
+																																						./img/main/gallery/modals/1024/modal_slide-1@2x.webp 2x">
+              <source media="(max-width: 1024px)" srcset="./img/main/gallery/modals/1024/modal_slide-1.jpg 1x,
+																													./img/main/gallery/modals/1024/modal_slide-1@2x.jpg 2x">
+              <source type="image/avif" srcset="./img/main/gallery/modals/1920/modal_slide-1.avif 1x,
+																								./img/main/gallery/modals/1920/modal_slide-1@2x.avif 2x">
+              <source type="image/webp" srcset="./img/main/gallery/modals/1920/modal_slide-1.webp 1x,
+																								./img/main/gallery/modals/1920/modal_slide-1@2x.webp 2x">
+              <img class="modals__img" src="./img/main/gallery/modals/1920/modal_slide-1.jpg"
+                srcset="./img/main/gallery/modals/1920/modal_slide-1@2x.jpg 2x"
+                alt="Казимир Малевич - Женщина с граблями">
+            </picture>
+            <div class="modals__content">
+              <button class="modals__btn-close js-btn-close-modal-gallery" type="submit" aria-label="Закрыть описание">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black">
+                  </path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z"
+                    fill="black"></path>
+                </svg>
+              </button>
+              <h3 class="modals__author">Казимир Малевич</h3>
+              <cite class="modals__title-artwork">“Женщина с граблями”</cite>
+              <div class="modals__date-artwork"><time datetime="1931">1931</time> - <time datetime="1932">1932</time>
+              </div>
+              <p class="modals__description-artwork">
+                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+              </p>
+            </div>
+          </article>
+          <article class="modals__slider js-modal-slider" data-target-modal="slider-placeholder">
+            <picture>
+              <source media="(max-width: 480px)" type="image/avif" srcset="https://via.placeholder.com/290x200.avif/?text=image+1x+avif 1x,
+																																					 https://via.placeholder.com/580x400.avif/?text=image+2x+avif 2x">
+              <source media="(max-width: 480px)" type="image/webp" srcset="https://via.placeholder.com/290x200.webp/?text=image+1x+webp 1x,
+																																					 https://via.placeholder.com/580x400.webp/?text=image+2x+webp 2x">
+              <source media="(max-width: 480px)" srcset="https://via.placeholder.com/290x200.jpg/?text=image+1x+jpg 1x,
+																												 https://via.placeholder.com/580x400.jpg/?text=image+2x+jpg 2x">
+              <source media="(max-width: 768px)" type="image/avif" srcset="https://via.placeholder.com/301x594.avif/?text=image+1x+avif 1x,
+																																					 https://via.placeholder.com/602x1188.avif/?text=image+2x+avif 2x">
+              <source media="(max-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/301x594.web/?text=image+1x+web 1x,
+																																					 https://via.placeholder.com/602x1188.web/?text=image+2x+web 2x">
+              <source media="(max-width: 768px)" srcset="https://via.placeholder.com/301x594.jpg/?text=image+1x+jpg 1x,
+																												 https://via.placeholder.com/602x1188.jpg/?text=image+2x+jpg 2x">
+              <source media="(max-width: 1024px)" type="image/avif" srcset="https://via.placeholder.com/264x594.avif/?text=image+1x+avif 1x,
+																																						https://via.placeholder.com/528x1188.avif/?text=image+2x+avif 2x">
+              <source media="(max-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/264x594.webp/?text=image+1x+webp 1x,
+																																						https://via.placeholder.com/528x1188.webp/?text=image+2x+webp 2x">
+              <source media="(max-width: 1024px)" srcset="https://via.placeholder.com/264x594.jpg/?text=image+1x+jpg 1x,
+																													https://via.placeholder.com/528x1188.jpg/?text=image+2x+jpg 2x">
+              <source type="image/avif" srcset="https://via.placeholder.com/400x500.avif/?text=image+1x+avif 1x,
+																								https://via.placeholder.com/800x1000.avif/?text=image+2x+avif 2x">
+              <source type="image/webp" srcset="https://via.placeholder.com/400x500.webp/?text=image+1x+webp 1x,
+																								https://via.placeholder.com/800x1000.webp/?text=image+2x+webp 2x">
+              <img class="modals__img" src="https://via.placeholder.com/400x500.jpg/?text=image+1x+jpg"
+                srcset="https://via.placeholder.com/800x1000.jpg/?text=image+2x+jpg 2x"
+                alt="Казимир Малевич - Женщина с граблями">
+            </picture>
+            <div class="modals__content">
+              <button class="modals__btn-close js-btn-close-modal-gallery" type="submit" aria-label="Закрыть описание">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black">
+                  </path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z"
+                    fill="black"></path>
+                </svg>
+              </button>
+              <h3 class="modals__author">Имя Фамилия автора</h3>
+              <cite class="modals__title-artwork">“Название картины”</cite>
+              <div class="modals__date-artwork"><time datetime="1931">даты</time> - <time datetime="1932">написания
+                  картины</time></div>
+              <p class="modals__description-artwork">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cupiditate distinctio doloribus dolorum
+                esse eveniet fugit hic illum iusto laborum laudantium nemo numquam odio possimus quisquam recusandae
+                rerum similique, sunt?
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -306,6 +1254,9 @@
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <!-- Include Swiper js-->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!--  Include Choices js-->
+  <script src="./js/choices.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
+
 </html>

@@ -68,10 +68,31 @@
 
 .header__item-artist:active {
   outline: var(--color-craiola) 2px solid;
+}
+
+.header__item-artist:active .header__link-artist::after {
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
 /*форма поиска*/
+.header__search-btn_desktop:hover rect,
+.header__search-btn_desktop:hover path {
+  fill: var(--color-pink-purple);
+  transition: fill .3s ease-in-out;
+}
+
+.header__search-btn_desktop:focus rect,
+.header__search-btn_desktop:focus path {
+  fill: var(--color-pink-purple);
+  transition: fill .3s ease-in-out;
+}
+
+.header__search-btn_desktop:active rect,
+.header__search-btn_desktop:active path {
+  fill: var(--color-purple);
+  transition: fill .3s ease-in-out;
+}
+
 .header__search-input:hover {
   border-bottom-color: var(--color-pink-purple);
 }
@@ -83,6 +104,7 @@
 .header__search-input:active {
   border-bottom-color: var(--color-purple);
 }
+
 
 /*Section hero*/
 /*Кнопка подписаться на рассылку*/
@@ -101,6 +123,99 @@
   background-color: var(--color-purple);
 }
 
+/*Section gallery*/
+/*Фильтр*/
+.section-gallery__swiper-container_active {
+  display: block;
+}
+
+.choices:hover,
+.choices:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.is-focused .choices__item--selectable.is-highlighted {
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.is-active .is-highlighted {
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Авторизация */
+.section-gallery__link-authorization:hover {
+  color: var(--color-amethyst);
+}
+
+.section-gallery__link-authorization:hover::after {
+  transform: scaleX(1);
+}
+
+.section-gallery__link-authorization:focus {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.section-gallery__link-authorization:active {
+  color: var(--color-purple);
+}
+
+.section-gallery__link-authorization:active::after {
+  background-color: var(--color-purple);
+  transform: scaleX(1);
+}
+
+/*слайдер*/
+.section-gallery__slide-btn:hover.section-gallery__slide-btn::after {
+  opacity: 1;
+}
+
+.section-gallery__slide:focus-within {
+  outline: var(--color-purple) solid 3px;
+}
+
+.section-gallery__slide-btn:active.section-gallery__slide-btn::after {
+  opacity: 1;
+}
+
+.section-gallery__btn-next:hover,
+.section-gallery__btn-prev:hover {
+  background-color: var(--color-amethyst);
+}
+
+.section-gallery__btn-next:focus,
+.section-gallery__btn-prev:focus {
+  outline: var(--color-black) solid 2px;
+  outline-offset: -2px
+}
+
+.section-gallery__btn-next:active,
+.section-gallery__btn-prev:active {
+  background-color: var(--color-amethyst);
+  outline: var(--color-black) solid 2px;
+  outline-offset: -2px
+}
+
+/*Модальные окна*/
+.modals-active {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.modal__overlay_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__slider_visible {
+  display: flex;
+}
 
 @media screen and (max-width: 1024px) {
   /*Лого*/

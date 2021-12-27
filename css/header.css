@@ -5,11 +5,10 @@
   align-items: center;
 }
 
-.header__container_black {
+.header__container-black {
   padding-top: 29px;
   padding-bottom: 31px;
   background-color: var(--color-black);
-  z-index: 1;
 }
 
 /*Кнопка бургер меню*/
@@ -54,7 +53,7 @@
   background-color: var(--color-white);
 }
 
-/*Скрываем заголовк*/
+/*Скрываем заголовок*/
 .header__main-title {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -68,25 +67,31 @@
   margin-right: 100px;
   min-width: 173px;
   height: 40px;
-  background-image: url("../img/header/logo.svg");
-  background-repeat: no-repeat;
-  background-size: 173px 40px;
 }
 
 /*Меню навигации*/
 .header__nav-wrap {
   flex: 0 1 1248px;
+  transition: top .3s ease-in-out;
+}
+
+.header__nav-scroll {
   display: flex;
   justify-content: space-between;
-  transition: top .3s ease-in-out;
 }
 
 .header__nav-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header__nav-item:not(:last-child) {
   margin-right: 56px;
+}
+
+.header__nav-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .header__nav-link {
@@ -103,8 +108,10 @@
 
 /*ссылка на личный кабинет*/
 .header__link-account {
+  display: flex;
+  flex-wrap: nowrap;
   margin-right: -5px;
-  padding: 0 5px;
+  padding: 6px 5px;
   color: var(--color-white);
   font-size: 18px;
   outline: none;
@@ -121,7 +128,7 @@
 }
 
 /*Нижний блок*/
-.header__container_transparent {
+.header__container-transparent {
   position: relative;
   padding-top: 22px;
   padding-bottom: 20px;
@@ -130,14 +137,19 @@
 }
 
 /*Меню навигации по художникам*/
+.header__nav-artist-wrap {
+  flex: 0 1 1071px;
+}
+
 .header__nav-artist {
-  flex: 0 1 1041px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .header__nav-artist-inner {
   position: relative;
+  margin-right: 30px;
 }
 
 .header__btn-art {
@@ -159,22 +171,23 @@
   display: none;
   position: absolute;
   top: 47px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  width: 300px;
-  height: 300px;
+  padding-top: 38px;
+  padding-bottom: 38px;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.header__simplebar-container {
+  width: 300px;
+  height: 224px;
 }
 
 .header__list-artist {
-  /*display: none;*/
-  /*position: absolute;*/
-  /*top: 47px;*/
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-left: 40px;
-  padding-bottom: 40px;
   width: 300px;
-  height: 220px;
-  /*background-color: rgba(0, 0, 0, 0.6);*/
+  height: 224px;
 }
 
 .header__item-artist {
@@ -195,6 +208,7 @@
   font-weight: 600;
   text-decoration: none;
   color: var(--color-white);
+  z-index: 2;
 }
 
 .header__link-artist::after {
@@ -212,286 +226,206 @@
 /*!*Реализм*!*/
 .tintoretto {
   background-image: url("../img/header/art/tintoretto.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/tintoretto@2x.jpg") 2x,
-    url("../img/header/art/tintoretto.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/tintoretto@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/tintoretto.avif") type('image/avif') 1x,
-    url("../img/header/art/tintoretto@2x.jpg") 2x,
-    url("../img/header/art/tintoretto.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/tintoretto@2x.avif") 2x,
+      url("../img/header/art/tintoretto.avif") 1x);
+  background-image: image-set(url("../img/header/art/tintoretto@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/tintoretto.avif") type('image/avif') 1x,
+      url("../img/header/art/tintoretto@2x.jpg") 2x,
+      url("../img/header/art/tintoretto.jpg") 1x);
 }
 
 .frederick {
   background-image: url("../img/header/art/frederick.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/frederick@2x.jpg") 2x,
-    url("../img/header/art/frederick.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/frederick@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/frederick.avif") type('image/avif') 1x,
-    url("../img/header/art/frederick@2x.jpg") 2x,
-    url("../img/header/art/frederick.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/frederick@2x.avif") 2x,
+      url("../img/header/art/frederick.avif") 1x);
+  background-image: image-set(url("../img/header/art/frederick@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/frederick.avif") type('image/avif') 1x,
+      url("../img/header/art/frederick@2x.jpg") 2x,
+      url("../img/header/art/frederick.jpg") 1x);
 }
 
 .leonardo {
   background-image: url("../img/header/art/leonardo.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/leonardo@2x.jpg") 2x,
-    url("../img/header/art/leonardo.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/leonardo@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/leonardo.avif") type('image/avif') 1x,
-    url("../img/header/art/leonardo@2x.jpg") 2x,
-    url("../img/header/art/leonardo.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/leonardo@2x.avif") 2x,
+      url("../img/header/art/leonardo.avif") 1x);
+  background-image: image-set(url("../img/header/art/leonardo@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/leonardo.avif") type('image/avif') 1x,
+      url("../img/header/art/leonardo@2x.jpg") 2x,
+      url("../img/header/art/leonardo.jpg") 1x);
 }
 
 .verrocchio {
   background-image: url("../img/header/art/verrocchio.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/verrocchio@2x.jpg") 2x,
-    url("../img/header/art/verrocchio.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/verrocchio@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/verrocchio.avif") type('image/avif') 1x,
-    url("../img/header/art/verrocchio@2x.jpg") 2x,
-    url("../img/header/art/verrocchio.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/verrocchio@2x.avif") 2x,
+      url("../img/header/art/verrocchio.avif") 1x);
+  background-image: image-set(url("../img/header/art/verrocchio@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/verrocchio.avif") type('image/avif') 1x,
+      url("../img/header/art/verrocchio@2x.jpg") 2x,
+      url("../img/header/art/verrocchio.jpg") 1x);
 }
 
 /*Импрессионизм*/
 .monet {
   background-image: url("../img/header/art/monet.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/monet@2x.jpg") 2x,
-    url("../img/header/art/monet.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/monet@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/monet.avif") type('image/avif') 1x,
-    url("../img/header/art/monet@2x.jpg") 2x,
-    url("../img/header/art/monet.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/monet@2x.avif") 2x,
+      url("../img/header/art/monet.avif") 1x);
+  background-image: image-set(url("../img/header/art/monet@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/monet.avif") type('image/avif') 1x,
+      url("../img/header/art/monet@2x.jpg") 2x,
+      url("../img/header/art/monet.jpg") 1x);
 }
 
 .sisley {
   background-image: url("../img/header/art/sisley.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/sisley@2x.jpg") 2x,
-    url("../img/header/art/sisley.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/sisley@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/sisley.avif") type('image/avif') 1x,
-    url("../img/header/art/sisley@2x.jpg") 2x,
-    url("../img/header/art/sisley.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/sisley@2x.avif") 2x,
+      url("../img/header/art/sisley.avif") 1x);
+  background-image: image-set(url("../img/header/art/sisley@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/sisley.avif") type('image/avif') 1x,
+      url("../img/header/art/sisley@2x.jpg") 2x,
+      url("../img/header/art/sisley.jpg") 1x);
 }
 
 .manet {
   background-image: url("../img/header/art/manet.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/manet@2x.jpg") 2x,
-    url("../img/header/art/manet.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/manet@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/manet.avif") type('image/avif') 1x,
-    url("../img/header/art/manet@2x.jpg") 2x,
-    url("../img/header/art/manet.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/manet@2x.avif") 2x,
+      url("../img/header/art/manet.avif") 1x);
+  background-image: image-set(url("../img/header/art/manet@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/manet.avif") type('image/avif') 1x,
+      url("../img/header/art/manet@2x.jpg") 2x,
+      url("../img/header/art/manet.jpg") 1x);
 }
 
 .renoir {
   background-image: url("../img/header/art/renoir.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/renoir@2x.jpg") 2x,
-    url("../img/header/art/renoir.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/renoir@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/renoir.avif") type('image/avif') 1x,
-    url("../img/header/art/renoir@2x.jpg") 2x,
-    url("../img/header/art/renoir.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/renoir@2x.avif") 2x,
+      url("../img/header/art/renoir.avif") 1x);
+  background-image: image-set(url("../img/header/art/renoir@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/renoir.avif") type('image/avif') 1x,
+      url("../img/header/art/renoir@2x.jpg") 2x,
+      url("../img/header/art/renoir.jpg") 1x);
 }
 
 /*Постимпрессионизм*/
 .van-gogh {
   background-image: url("../img/header/art/van_gogh.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/van_gogh@2x.jpg") 2x,
-    url("../img/header/art/van_gogh.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/van_gogh@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/van_gogh.avif") type('image/avif') 1x,
-    url("../img/header/art/van_gogh@2x.jpg") 2x,
-    url("../img/header/art/van_gogh.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/van_gogh@2x.avif") 2x,
+      url("../img/header/art/van_gogh.avif") 1x);
+  background-image: image-set(url("../img/header/art/van_gogh@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/van_gogh.avif") type('image/avif') 1x,
+      url("../img/header/art/van_gogh@2x.jpg") 2x,
+      url("../img/header/art/van_gogh.jpg") 1x);
 }
 
 .cezanne {
   background-image: url("../img/header/art/cezanne.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/cezanne@2x.jpg") 2x,
-    url("../img/header/art/cezanne.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/cezanne@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/cezanne.avif") type('image/avif') 1x,
-    url("../img/header/art/cezanne@2x.jpg") 2x,
-    url("../img/header/art/cezanne.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/cezanne@2x.avif") 2x,
+      url("../img/header/art/cezanne.avif") 1x);
+  background-image: image-set(url("../img/header/art/cezanne@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/cezanne.avif") type('image/avif') 1x,
+      url("../img/header/art/cezanne@2x.jpg") 2x,
+      url("../img/header/art/cezanne.jpg") 1x);
 }
 
 .gauguin {
   background-image: url("../img/header/art/gauguin.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/gauguin@2x.jpg") 2x,
-    url("../img/header/art/gauguin.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/gauguin@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/gauguin.avif") type('image/avif') 1x,
-    url("../img/header/art/gauguin@2x.jpg") 2x,
-    url("../img/header/art/gauguin.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/gauguin@2x.avif") 2x,
+      url("../img/header/art/gauguin.avif") 1x);
+  background-image: image-set(url("../img/header/art/gauguin@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/gauguin.avif") type('image/avif') 1x,
+      url("../img/header/art/gauguin@2x.jpg") 2x,
+      url("../img/header/art/gauguin.jpg") 1x);
 }
 
 .sulfur {
   background-image: url("../img/header/art/sulfur.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/sulfur@2x.jpg") 2x,
-    url("../img/header/art/sulfur.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/sulfur@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/sulfur.avif") type('image/avif') 1x,
-    url("../img/header/art/sulfur@2x.jpg") 2x,
-    url("../img/header/art/sulfur.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/sulfur@2x.avif") 2x,
+      url("../img/header/art/sulfur.avif") 1x);
+  background-image: image-set(url("../img/header/art/sulfur@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/sulfur.avif") type('image/avif') 1x,
+      url("../img/header/art/sulfur@2x.jpg") 2x,
+      url("../img/header/art/sulfur.jpg") 1x);
 }
 
 /*Авангард*/
 .kandinsky {
   background-image: url("../img/header/art/kandinsky.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/kandinsky@2x.jpg") 2x,
-    url("../img/header/art/kandinsky.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/kandinsky@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/kandinsky.avif") type('image/avif') 1x,
-    url("../img/header/art/kandinsky@2x.jpg") 2x,
-    url("../img/header/art/kandinsky.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/kandinsky@2x.avif") 2x,
+      url("../img/header/art/kandinsky.avif") 1x);
+  background-image: image-set(url("../img/header/art/kandinsky@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/kandinsky.avif") type('image/avif') 1x,
+      url("../img/header/art/kandinsky@2x.jpg") 2x,
+      url("../img/header/art/kandinsky.jpg") 1x);
 }
 
 .marinetti {
   background-image: url("../img/header/art/marinetti.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/marinetti@2x.jpg") 2x,
-    url("../img/header/art/marinetti.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/marinetti@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/marinetti.avif") type('image/avif') 1x,
-    url("../img/header/art/marinetti@2x.jpg") 2x,
-    url("../img/header/art/marinetti.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/marinetti@2x.avif") 2x,
+      url("../img/header/art/marinetti.avif") 1x);
+  background-image: image-set(url("../img/header/art/marinetti@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/marinetti.avif") type('image/avif') 1x,
+      url("../img/header/art/marinetti@2x.jpg") 2x,
+      url("../img/header/art/marinetti.jpg") 1x);
 }
 
 .malevich {
   background-image: url("../img/header/art/malevich.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/malevich@2x.jpg") 2x,
-    url("../img/header/art/malevich.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/malevich@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/malevich.avif") type('image/avif') 1x,
-    url("../img/header/art/malevich@2x.jpg") 2x,
-    url("../img/header/art/malevich.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/malevich@2x.avif") 2x,
+      url("../img/header/art/malevich.avif") 1x);
+  background-image: image-set(url("../img/header/art/malevich@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/malevich.avif") type('image/avif') 1x,
+      url("../img/header/art/malevich@2x.jpg") 2x,
+      url("../img/header/art/malevich.jpg") 1x);
 }
 
 .picasso {
   background-image: url("../img/header/art/picasso.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/picasso@2x.jpg") 2x,
-    url("../img/header/art/picasso.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/picasso@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/picasso.avif") type('image/avif') 1x,
-    url("../img/header/art/picasso@2x.jpg") 2x,
-    url("../img/header/art/picasso.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/picasso@2x.avif") 2x,
+      url("../img/header/art/picasso.avif") 1x);
+  background-image: image-set(url("../img/header/art/picasso@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/picasso.avif") type('image/avif') 1x,
+      url("../img/header/art/picasso@2x.jpg") 2x,
+      url("../img/header/art/picasso.jpg") 1x);
 }
 
 /*Футуризм*/
 .carr {
   background-image: url("../img/header/art/carr.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/carr@2x.jpg") 2x,
-    url("../img/header/art/carr.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/carr@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/carr.avif") type('image/avif') 1x,
-    url("../img/header/art/carr@2x.jpg") 2x,
-    url("../img/header/art/carr.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/carr@2x.avif") 2x,
+      url("../img/header/art/carr.avif") 1x);
+  background-image: image-set(url("../img/header/art/carr@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/carr.avif") type('image/avif') 1x,
+      url("../img/header/art/carr@2x.jpg") 2x,
+      url("../img/header/art/carr.jpg") 1x);
 }
 
 .pratella {
   background-image: url("../img/header/art/pratella.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/pratella@2x.jpg") 2x,
-    url("../img/header/art/pratella.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/pratella@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/pratella.avif") type('image/avif') 1x,
-    url("../img/header/art/pratella@2x.jpg") 2x,
-    url("../img/header/art/pratella.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/pratella@2x.avif") 2x,
+      url("../img/header/art/pratella.avif") 1x);
+  background-image: image-set(url("../img/header/art/pratella@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/pratella.avif") type('image/avif') 1x,
+      url("../img/header/art/pratella@2x.jpg") 2x,
+      url("../img/header/art/pratella.jpg") 1x);
 }
 
 .severini {
   background-image: url("../img/header/art/severini.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/severini@2x.jpg") 2x,
-    url("../img/header/art/severini.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/severini@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/severini.avif") type('image/avif') 1x,
-    url("../img/header/art/severini@2x.jpg") 2x,
-    url("../img/header/art/severini.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/severini@2x.avif") 2x,
+      url("../img/header/art/severini.avif") 1x);
+  background-image: image-set(url("../img/header/art/severini@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/severini.avif") type('image/avif') 1x,
+      url("../img/header/art/severini@2x.jpg") 2x,
+      url("../img/header/art/severini.jpg") 1x);
 }
 
 .score {
   background-image: url("../img/header/art/balla.jpg");
-  background-image: -webkit-image-set(
-    url("../img/header/art/balla@2x.jpg") 2x,
-    url("../img/header/art/balla.jpg") 1x
-  );
-  background-image: image-set(
-    url("../img/header/art/balla@2x.avif") type('image/avif') 2x,
-    url("../img/header/art/balla.avif") type('image/avif') 1x,
-    url("../img/header/art/balla@2x.jpg") 2x,
-    url("../img/header/art/balla.jpg") 1x
-  );
+  background-image: -webkit-image-set(url("../img/header/art/balla@2x.avif") 2x,
+      url("../img/header/art/balla.avif") 1x);
+  background-image: image-set(url("../img/header/art/balla@2x.avif") type('image/avif') 2x,
+      url("../img/header/art/balla.avif") type('image/avif') 1x,
+      url("../img/header/art/balla@2x.jpg") 2x,
+      url("../img/header/art/balla.jpg") 1x);
 }
 
 /*simplebar*/
@@ -536,20 +470,16 @@
 }
 
 .header__search-btn {
-  padding: 6px;
+  padding: 5px;
   border: none;
   background-color: transparent;
-  background-repeat: no-repeat;
   cursor: pointer;
 }
 
 .header__search-btn_desktop {
-  margin-right: 2px;
-  width: 23px;
-  height: 27px;
-  background-image: url("../img/header/search_btn.svg");
-  background-size: 23px 22px;
-  background-position: left 5px;
+  width: 29px;
+  height: 28px;
+  outline: none;
 }
 
 .header__search-btn_mobile {

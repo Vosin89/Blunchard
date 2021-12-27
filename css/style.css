@@ -21,10 +21,10 @@
 }
 
 .container {
-  max-width: 1630px;
+  max-width: 1700px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .list-reset {
@@ -41,4 +41,8 @@
   font-weight: 400;
   line-height: 65px;
   color: var(--color-dark-green);
+}
+
+.simplebar-horizontal {
+  display: none;
 }
