@@ -26,6 +26,19 @@
   .header__search-input_desktop {
     width: 155px;
   }
+
+  /* Колонки в каталоге */
+  .accordion__list-author {
+    columns: 2;
+    column-gap: 45px;
+  }
+
+  /* Картинка заглушка */
+  .accordion__placeholder-img {
+    width: 173px;
+    height: 114px;
+    outline-offset: 8px;
+  }
 }
 
 
@@ -33,7 +46,8 @@
 
   /*header*/
   .header__container-black {
-    padding-bottom: 29px;
+    padding-top: 30px;
+    padding-bottom: 28px;
   }
 
   .header__btn-burger {
@@ -159,35 +173,31 @@
   }
 
   .section-hero__lead {
-    margin-bottom: 160px;
+    margin-bottom: 151px;
     max-width: 660px;
   }
 
   /*Section us*/
   .section-us {
-    padding-top: 77px;
+    padding-top: 74px;
     padding-bottom: 53px;
   }
 
-  /* Section gallery */
+  /*Section gallery*/
   .section-gallery {
-    padding-bottom: 80px;
+    padding-bottom: 82px;
   }
 
-  .section-gallery__wrap {
-    flex: 0 1 330px;
-    min-height: 679px;
+  .section-gallery__container {
+    grid-template-columns: minmax(150px, 280px) minmax(438px, 594px);
+  }
+
+  .section-gallery__swiper-container {
+    height: 594px;
   }
 
   .section-gallery__description {
-    margin-bottom: -8px;
-  }
-
-  .section-gallery__swiper-container_painting,
-  .section-gallery__swiper-container_drawing,
-  .section-gallery__swiper-container_sculpture {
-    width: 594px;
-    height: 679px;
+    margin-bottom: -12px;
   }
 
   .section-gallery__slide {
@@ -205,6 +215,130 @@
 
   .modals__content {
     padding: 122px 50px 90px;
+  }
+
+  .choices__list--dropdown .choices__item--selectable {
+    padding-right: 50px;
+  }
+
+  /* Каталог */
+  .section-catalog {
+    padding-top: 76px;
+  }
+
+  .section-catalog__title {
+    margin-right: 43px;
+  }
+
+  .section-catalog__list-filter {
+    padding-top: 22px;
+  }
+
+  .section-catalog__wrap-filter {
+    margin-bottom: 8px;
+  }
+
+  .tabs-content,
+  .accordion {
+    flex: 1 1 437px;
+  }
+
+  /* События */
+  .section-events {
+    padding-bottom: 60px;
+  }
+
+  .events__item {
+    max-width: 290px;
+  }
+
+  .events__img {
+    max-height: 200px;
+  }
+
+  .events__description {
+    padding: 20px 34px 19px;
+  }
+
+  .events-adress,
+  .events-date {
+    align-self: flex-end;
+  }
+
+  .events-adress {
+    margin-bottom: 7px;
+  }
+
+  .events-date time {
+    margin-bottom: 5px;
+    line-height: 13px;
+  }
+
+  .events__title {
+    margin-bottom: 10px;
+  }
+
+  .events__text {
+    margin-bottom: 0;
+  }
+
+  .section-events__btn-nav {
+    display: none;
+  }
+
+  .section-events__pagination {
+    display: block;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -52px;
+  }
+
+  /* Проекты */
+  .section-projects {
+    padding-top: 62px;
+  }
+
+  .section-projects__swiper-wrap {
+    padding-right: 53px;
+    padding-left: 53px;
+  }
+
+  .partners__item {
+    height: 128px;
+  }
+
+  /* Контакты */
+  .section-contacts__wrap-border {
+    padding-top: 48px;
+  }
+
+  .contacts__form {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .contacts__btn-call {
+    flex-basis: 342px;
+  }
+
+  /* footer */
+  .footer {
+    padding-top: 44px;
+    padding-bottom: 29px;
+  }
+
+  .footer__container {
+    align-items: center;
+  }
+
+  .footer__socials-list {
+    flex-basis: 240px;
+  }
+
+  .footer__socials-icon {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -287,44 +421,29 @@
 
   /* Section gallery */
   .section-gallery {
-    padding-bottom: 80px;
+    padding-bottom: 81px;
   }
 
-  .section-gallery__wrap {
-    width: 100%;
-    margin-right: 0;
-    min-height: 935px;
+  .section-gallery__container {
+    grid-template-rows: auto;
+    grid-template-columns: minmax(561px, 668px);
+    column-gap: 0;
   }
 
   .section-gallery__wrap-filter {
-    margin-bottom: 47px
+    margin-bottom: 50px;
   }
 
   .section-gallery__form {
-    max-width: 280px
+    max-width: 280px;
   }
 
-  .section-gallery__description {
-    order: 3;
-    margin-bottom: -8px;
+  .section-gallery__slider-container {
+    margin-bottom: 34px;
   }
 
-  .section-gallery__swiper-container {
-    padding-top: 58px;
-    margin-bottom: 35px;
-  }
-
-  .section-gallery__swiper-container_painting,
-  .section-gallery__swiper-container_drawing,
-  .section-gallery__swiper-container_sculpture {
-    width: auto;
-    max-width: 668px;
-    height: 652px;
-  }
-
-  .section-gallery__slide {
-    /* width: 317px; */
-    height: calc((100% - 34px) / 2);
+  .section-gallery__swiper-nav {
+    height: 57px;
   }
 
   .section-gallery__btn-next,
@@ -341,7 +460,7 @@
   }
 
   .section-gallery__pagination {
-    top: 6px;
+    top: 0;
     left: 42px;
   }
 
@@ -355,6 +474,137 @@
 
   .modals__content {
     padding: 122px 49px 90px;
+  }
+
+  .choices__list--dropdown {
+    z-index: 20;
+  }
+
+  .choices__list--dropdown.is-active {
+    background-color: rgba(0, 0, 0, .7);
+  }
+
+  /* Каталог */
+  .section-catalog {
+    padding-bottom: 33px;
+  }
+
+  .section-catalog__wrap-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .section-catalog__title {
+    margin-right: 40px;
+  }
+
+  .section-catalog__list-filter {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 16px;
+  }
+
+  .section-catalog__item-filter:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .section-catalog__lead {
+    margin-bottom: 21px;
+  }
+
+  .accordion__list-authors-country {
+    padding-top: 26px;
+    padding-bottom: 25px;
+  }
+
+  .accordion__list-author {
+    column-count: 3;
+  }
+
+  .tabs-content {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .accordion {
+    margin-bottom: var(--gutter);
+  }
+
+  .tabs-content__dates {
+    margin-bottom: 0;
+  }
+
+  /* Секция События */
+  .section-events {
+    padding-top: 34px;
+  }
+
+  .events__item {
+    max-width: 317px;
+  }
+
+  .events__description {
+    padding-bottom: 36px;
+  }
+
+  .events-adress,
+  .events-date {
+    margin-right: -18px;
+  }
+
+  .events__title {
+    margin-bottom: 6px;
+  }
+
+  .events__text {
+    margin-bottom: 21px;
+  }
+
+  .events__link-more {
+    margin-left: -6px;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -50px;
+  }
+
+  /* Проекты */
+  .section-projects {
+    padding-top: 60px;
+  }
+
+  .section-projects__description {
+    margin-bottom: 28px;
+  }
+
+  .section-projects__partners {
+    margin-bottom: 30px;
+  }
+
+  .partners__item {
+    height: 106px;
+  }
+
+  /* Контакты */
+  .section-contacts__wrap-border {
+    padding-bottom: 7px;
+  }
+
+  .contacts__form {
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .contacts__input-wrap {
+    margin-right: 0;
+    flex-basis: 323px;
+  }
+
+  .contacts__btn-call {
+    padding: 10px 18px;
+    flex-basis: 317px;
   }
 }
 
@@ -438,36 +688,9 @@
   }
 
   /* Section gallery */
-  .section-gallery__wrap {
-    justify-content: flex-start;
-    width: 100%;
-    margin-right: 0;
-    min-height: 810px;
-  }
-
-  .section-gallery__wrap-filter {
-    margin-bottom: 90px
-  }
-
-  .section-gallery__form {
-    max-width: 100%
-  }
-
-  .section-gallery__swiper-container {
-    padding-top: 0;
-    padding-bottom: 70px;
-    margin-bottom: 20px;
-  }
-
-  .section-gallery__swiper-container_painting,
-  .section-gallery__swiper-container_drawing,
-  .section-gallery__swiper-container_sculpture {
-    height: 437px;
-  }
-
-  .section-gallery__slide {
-    width: 317px;
-    height: 100%;
+  .section-gallery__container {
+    grid-template-columns: minmax(290px, 631px);
+    column-gap: 0;
   }
 
   .section-gallery__btn-next,
@@ -485,10 +708,17 @@
   }
 
   .section-gallery__pagination {
-    top: auto;
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .section-gallery__swiper-nav {
+    margin-bottom: 20px;
+  }
+
+  .section-gallery__slide {
+    height: 100%;
   }
 
   .modals__slider {
@@ -502,6 +732,42 @@
 
   .modals__content {
     padding: 70px 20px;
+  }
+
+  /* Каталог */
+  .accordion__list-author {
+    columns: 2;
+  }
+
+  /* Секция Проекты */
+  .section-projects__swiper-wrap {
+    padding-right: 66px;
+    padding-left: 66px;
+  }
+
+  /* Контакты */
+
+  .section-contacts__map {
+    height: 100vw;
+  }
+
+
+  /* footer */
+  .footer__container {
+    flex-direction: column;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .footer__logo {
+    margin-right: 0;
+    order: 1;
+  }
+
+  .footer__socials-list {
+    flex-basis: 50px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -575,9 +841,9 @@
 
   /*Вход в аккаунт*/
   .header__link-account {
-    padding: 10px 31px;
+    padding: 0 31px;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 32px;
   }
 
   .header__link-arrow svg {
@@ -683,48 +949,309 @@
   /* section-gallery */
   .section-gallery {
     padding-top: 50px;
-    padding-bottom: 40px;
-  }
-
-  .section-gallery__wrap {
-    min-height: 764px;
-  }
-
-  .section-gallery__title {
-    margin-bottom: 12px;
-  }
-
-  .section-gallery__form-title {
-    margin-bottom: 5px;
+    padding-bottom: 52px;
   }
 
   .section-gallery__wrap-filter {
     margin-bottom: 40px;
   }
 
-  .section-gallery__swiper-container {
-    padding-bottom: 50px;
+  .section-gallery__title {
+    margin-bottom: 12px;
+  }
+
+  .section-gallery__form {
+    max-width: 100%;
+  }
+
+  .section-gallery__form-title {
+    margin-bottom: 5px;
+  }
+
+  .section-gallery__slider-container {
     height: 417px;
+    margin-bottom: 20px;
+  }
+
+  .section-gallery__swiper-nav {
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .section-gallery__swiper-container {
+    margin-bottom: 20px;
+  }
+
+  .section-gallery__slide {
+    height: 100%;
+  }
+
+  .section-gallery__swiper-nav {
+    order: 1;
   }
 
   .modals__slider {
     flex-direction: column;
-    max-width: calc(100% - 30px);
-    max-height: 600px;
+    min-height: 600px;
   }
 
   .modals__img {
-    max-width: none;
     width: 100%;
-    height: auto;
   }
 
   .modals__content {
-    padding: 17px 20px;
+    width: 100%;
+    padding: 17px 20px 26px;
   }
 
-  .modals__author,
+  .modals__title-artwork {
+    margin-bottom: 5px;
+  }
+
   .modals__date-artwork {
+    margin-bottom: 12px;
+  }
+
+  .modals__description-artwork {
+    max-height: 277px;
+  }
+
+  /* Каталог */
+  .section-catalog {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .section-catalog__wrap-filter {
+    margin-bottom: 12px;
+  }
+
+  .section-catalog__title {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .section-catalog__list-filter {
+    padding-top: 0;
+  }
+
+  .section-catalog__btn-filter {
+    width: 32px;
+    height: 32px;
+  }
+
+  .section-catalog__lead {
+    display: none;
+  }
+
+  .accordion__btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .accordion__btn-dates {
+    font-size: 18px;
+  }
+
+  .accordion__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion__icon-img {
+    width: 12px;
+    height: 7px;
+    left: calc(50% - 6px);
+  }
+
+  .accordion__list-author {
+    columns: 1;
+  }
+
+  .accordion__list-authors-country {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .accordion__item-author:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  .tabs-content__img {
+    margin-bottom: 20px;
+  }
+
+  .tabs-content__author {
+    margin-bottom: 6px;
+  }
+
+  .accordion__placeholder-title {
+    font-size: 18px;
+  }
+
+  .accordion__placeholder-text {
+    width: 174px;
+  }
+
+  .accordion__placeholder-img {
+    width: 79px;
+    height: 118px;
+    margin-right: 0;
+    outline-offset: 6px;
+  }
+
+  /* События */
+  .section-events {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  .section-events__title {
+    margin-bottom: 11px;
+  }
+
+  .events__item {
+    max-width: 450px;
+  }
+
+  .events__description {
+    padding: 22px 22px 37px;
+  }
+
+  .events-adress,
+  .events-date {
+    margin-right: -5px;
+  }
+
+  .events-adress {
+    margin-bottom: 7px;
+  }
+
+  .events-date {
+    margin-bottom: 13px;
+  }
+
+  .events__text {
+    margin-bottom: 10px;
+  }
+
+  .events__link-more {
+    margin-left: -2px;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -40px;
+  }
+
+  /* Секция Проекты */
+  .section-projects {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+
+  .section-projects__title {
+    margin-bottom: 12px;
+  }
+
+  .section-projects__description {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+
+  .section-projects__partners {
+    margin-bottom: 11px;
+    font-size: 18px;
+  }
+
+  .section-projects__swiper-wrap {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+
+  .partners__item {
+    height: calc((100vw - 124px) / 3);
+  }
+
+  .section-projects__swiper-btn-nav {
+    top: 60%;
+  }
+
+  /* Секция Контакты */
+  .section-contacts__wrap-border {
+    padding-top: 25px;
+    border: none;
+  }
+
+  .contacts__address-wrap {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .contacts__office-sales {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .contacts__address {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .contacts__form {
+    margin-bottom: 21px;
+  }
+
+  .contacts__input-wrap {
+    flex-basis: 100%;
+    margin-bottom: 19px;
+  }
+
+  .contacts__input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contacts__btn-call {
+    flex-basis: 58px;
+    padding-left: 33px;
+    padding-right: 33px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contacts__messegers {
+    margin-bottom: 0;
+  }
+
+  .contacts__messegers-title {
+    font-size: 18px;
+    letter-spacing: -0.45px;
+  }
+
+  .contacts__messegers-icon-link {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* footer */
+  .footer {
+    padding-top: 23px;
+    padding-bottom: 12px;
+  }
+
+  .footer__container {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .footer__logo-img {
+    width: 97px;
+    height: 22px;
+  }
+
+  .footer__socials-icon {
+    width: 50px;
+    height: 50px;
   }
 }

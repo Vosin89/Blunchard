@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 47px;
+  padding-bottom: 38px;
+  background-color: var(--color-black);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer__logo {
+  margin-right: 15px;
+}
+
+.footer__socials-list {
+  flex-basis: 175px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__socials-link {
+  text-decoration: none;
+  outline: none;
+}
+
+.footer__socials-link path {
+  transition: fill .3s ease-in-out;
+}

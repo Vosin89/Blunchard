@@ -42,20 +42,28 @@
   background-color: var(--color-purple);
 }
 
-.header__btn-art_active {
+.header__btn-art.is-active {
   color: var(--color-purple);
 }
 
-.header__btn-art_active svg {
+.header__btn-art.is-active svg {
   transform: rotateZ(180deg);
 }
 
-.header__btn-art_active path {
+.header__btn-art.is-active path {
   stroke: currentColor;
 }
 
-.header__list-artist_active {
+.header__list-artist-wrapper.is-active {
   display: block;
+  animation-name: dropdownOpen;
+  animation-duration: .3s;
+}
+
+.header__list-artist-wrapper.is-disabled {
+  display: block;
+  animation-name: dropdownClose;
+  animation-duration: .3s;
 }
 
 .header__item-artist:hover  {
@@ -217,6 +225,241 @@
   display: flex;
 }
 
+/* Каталог */
+/* Флаги */
+.section-catalog__btn-filter:hover {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.section-catalog__btn-filter_active {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 10px;
+}
+
+.section-catalog__btn-filter:focus {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.section-catalog__btn-filter:active {
+  border: 2px solid var(--color-purple);
+}
+
+/* Аккордеон */
+/* hover */
+.accordion__item:first-child .accordion__btn:hover,
+.accordion__btn:hover {
+  border-color: var(--color-amethyst);
+}
+
+.accordion__btn:hover .accordion__btn-dates {
+  color: var(--color-amethyst);
+}
+
+.accordion__btn:hover .accordion__icon {
+  background-color: var(--color-craiola);
+}
+
+/* focus */
+.accordion__btn:focus {
+  outline: none;
+}
+
+.accordion__btn:focus .accordion__btn-dates {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.accordion__btn:focus .accordion__icon {
+  background-color: var(--color-craiola);
+}
+
+/* active */
+.accordion__item:first-child .accordion__btn:active,
+.accordion__item:first-child .accordion__btn.ui-accordion-header-active,
+.accordion__btn.ui-accordion-header-active,
+.accordion__btn:active {
+  border-color: var(--color-purple);
+}
+
+.accordion__btn:active .accordion__btn-dates,
+.accordion__btn.ui-accordion-header-active .accordion__btn-dates {
+  color: var(--color-purple);
+}
+
+.accordion__btn:active .accordion__icon,
+.accordion__btn.ui-accordion-header-active .accordion__icon {
+  background-color: var(--color-craiola);
+  border: 2px solid var(--color-amethyst);
+}
+
+.accordion__btn.ui-accordion-header-active .accordion__icon-img {
+  transform: rotate(180deg);
+  top: calc(50% - 7px);
+}
+
+.accordion__list-authors-country.ui-accordion-content-active {
+  border-color: var(--color-light-telegray);
+}
+
+/* Ссылки */
+/* hover */
+.accordion__btn-author:hover {
+  color: var(--color-amethyst);
+}
+
+.accordion__btn-author:hover.accordion__btn-author::after {
+  transform: scaleX(1);
+}
+
+.accordion__btn-author:focus {
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  outline: none;
+}
+
+.accordion__btn-author:active {
+  color: var(--color-purple);
+}
+
+/* Взаимодействие с js */
+.tabs-content__wrap_active,
+.accordion__item-authors-country_active {
+  display: block;
+  animation: dropdownOpen .3s ease-in-out;
+}
+
+.is-disabled {
+  animation: dropdownClose .3s ease-in-out;
+}
+
+/* События */
+.events__link-more:focus {
+  background-color: var(--color-amethyst);
+  color: var(--color-white);
+}
+
+.events__link-more:focus.events__link-more::after {
+  background-color: var(--color-white);
+}
+
+.events__link-more:hover {
+  color: var(--color-purple);
+}
+
+.events__link-more:hover.events__link-more::after {
+  background-color: var(--color-purple);
+}
+
+.events__link-more:active {
+  color: var(--color-dark-green);
+}
+
+.events__link-more:active.events__link-more::after {
+  background-color: var(--color-dark-green);
+}
+
+.btn-nav-slider:hover {
+  background-color: var(--color-craiola);
+}
+
+.btn-nav-slider:focus {
+  border: 2px solid var(--color-amethyst);
+}
+
+.btn-nav-slider:active {
+  background-color: var(--color-craiola);
+  border: 2px solid var(--color-amethyst);
+}
+
+/* Проекты */
+.section-projects__tooltip:hover .section-projects__tooltip-icon,
+.section-projects__tooltip:focus .section-projects__tooltip-icon {
+  fill: var(--color-black);
+}
+
+.section-projects__tooltip:hover .section-projects__tooltip-circle,
+.section-projects__tooltip:focus .section-projects__tooltip-circle {
+  fill: var(--color-craiola);
+}
+
+.section-projects__tooltip:active .section-projects__tooltip-icon {
+  fill: var(--color-white);
+}
+
+.section-projects__tooltip:active .section-projects__tooltip-circle {
+  fill: var(--color-amethyst);
+}
+
+.section-projects__link-more:hover {
+  color: var(--color-amethyst);
+}
+
+.section-projects__link-more:focus {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.section-projects__link-more:active {
+  color: var(--color-purple);
+}
+
+.partners__link:hover .partners__slide-img {
+  filter: none;
+}
+
+.partners__link:focus.partners__link::after {
+  border-color: var(--color-amethyst);
+}
+
+.partners__link:active.partners__link::after {
+  border-color: var(--color-amethyst);
+}
+
+.partners__link:active .partners__slide-img {
+  filter: none;
+}
+
+/* Контакты */
+.contacts__input:hover,
+.contacts__input:focus {
+  background-color: var(--color-platinum);
+}
+
+.contacts__btn-call:hover {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.contacts__btn-call:focus {
+  outline: 2px solid var(--color-pink-purple);
+  outline-offset: 5px;
+}
+
+.contacts__btn-call:active {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+  border: 3px solid var(--color-craiola);
+}
+
+.contacts__messegers-link:hover .contacts__messegers-icon-link,
+.contacts__messegers-link:focus .contacts__messegers-icon-link {
+  opacity: .5;
+}
+
+.contacts__messegers-link:active .contacts__messegers-icon-link {
+  outline: 1px solid var(--color-purple);
+}
+
+/* footer */
+.footer__socials-link:hover path,
+.footer__socials-link:focus path {
+  fill: var(--color-white);
+}
+
+.footer__socials-link:active path {
+  fill: var(--color-amethyst);
+}
+
 @media screen and (max-width: 1024px) {
   /*Лого*/
   .search-open .header__link-logo {
@@ -274,9 +517,9 @@
     height: 4px;
   }
 
-  /*.search-open .header__search-form_mobile-active {*/
-  /*  display: flex;*/
-  /*}*/
+  .section-catalog__tabs-wrapper {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -296,5 +539,14 @@
   .search-open .header__search-btn_mobile-active::after {
     width: 19px;
     height: 2px;
+  }
+
+  /* Каталог */
+  .section-catalog__btn-filter_active {
+    outline-offset: 4px;
+  }
+
+  .accordion__btn.ui-accordion-header-active .accordion__icon-img {
+    top: calc(50% - 4px);
   }
 }

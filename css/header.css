@@ -6,8 +6,8 @@
 }
 
 .header__container-black {
-  padding-top: 29px;
-  padding-bottom: 31px;
+  padding-top: 26px;
+  padding-bottom: 28px;
   background-color: var(--color-black);
 }
 
@@ -54,13 +54,6 @@
 }
 
 /*Скрываем заголовок*/
-.header__main-title {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
 
 /*Лого*/
 .header__link-logo {
@@ -130,8 +123,8 @@
 /*Нижний блок*/
 .header__container-transparent {
   position: relative;
-  padding-top: 22px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
@@ -170,7 +163,7 @@
 .header__list-artist-wrapper {
   display: none;
   position: absolute;
-  top: 47px;
+  top: 52px;
   padding-top: 38px;
   padding-bottom: 38px;
   background-color: rgba(0, 0, 0, 0.6);

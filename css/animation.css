@@ -10,3 +10,21 @@
 .section-hero__slide {
   animation: animBackgroundHero 4s linear infinite alternate;
 }
+
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
