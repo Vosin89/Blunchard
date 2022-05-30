@@ -1,5 +1,6 @@
 /*Верхний блок*/
 .header__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,32 +26,30 @@
 }
 
 .header__burger-inner {
-  position: absolute;
   top: 5px;
-  left: 0;
   width: 36px;
-  height: 3px;
-  background-color: var(--color-white);
 }
 
 .header__burger-inner::after {
   content: '';
-  position: absolute;
   top: 12px;
-  left: 0;
   width: 28px;
-  height: 3px;
-  background-color: var(--color-white);
 }
 
 .header__burger-inner::before {
   content: '';
-  position: absolute;
   top: 25px;
-  left: 0;
   width: 24px;
+}
+
+.header__burger-inner,
+.header__burger-inner::after,
+.header__burger-inner::before {
+  position: absolute;
   height: 3px;
   background-color: var(--color-white);
+  left: 0;
+  transition: transform .2s linear;
 }
 
 /*Скрываем заголовок*/
@@ -65,7 +64,6 @@
 /*Меню навигации*/
 .header__nav-wrap {
   flex: 0 1 1248px;
-  transition: top .3s ease-in-out;
 }
 
 .header__nav-scroll {
@@ -118,6 +116,63 @@
 
 .header__link-arrow {
   padding-right: 2px;
+}
+
+/* форма поиска */
+.header__search-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.header__search-btn_open {
+  display: none;
+}
+
+.header__search-btn_desktop {
+  margin-right: 4px;
+  padding-top: 9px;
+}
+
+.header__search-btn_desktop rect,
+.header__search-btn_desktop path {
+  transition: fill .3s ease-in-out;
+}
+
+.header__search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__search-form_mobile {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  display: none;
+  background-color: var(--color-black);
+  transform: translateY(-50%);
+  transform-origin: right;
+}
+
+.header__search-input {
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+  transition: border-color .3s ease-in-out;
+  outline: none;
+}
+
+.header__search-input_desktop {
+  padding: 5px 5px 5px 0;
+  width: 218px;
+}
+
+.header__search-input_desktop::placeholder {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /*Нижний блок*/
@@ -187,6 +242,7 @@
   position: relative;
   padding: 9px 70px 12px 14px;
   width: 220px;
+  line-height: 18px;
   transition: outline .1s ease-in-out, background .1s ease-in-out;
 }
 
@@ -449,6 +505,11 @@
 }
 
 /*Поиск*/
+
+/* .header__search-open-btn {
+
+}
+
 .header__search-form {
   display: flex;
   flex-wrap: nowrap;
@@ -483,7 +544,7 @@
   background-position: center center;
 }
 
-.header__search-btn_mobile-active {
+.header__search-btn {
   display: none;
 }
 
@@ -507,4 +568,4 @@
   margin-left: 10px;
   padding: 0;
   width: 21.3vw;
-}
+} */

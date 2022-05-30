@@ -25,56 +25,100 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     focusInvalidFiled: true,
 
-    submitHandler: function(form) {
-      let formData = new formData();
+    // submitHandler: function(form) {
+    //   let formData = new formData();
 
-      fetch('../php/mail.php', {
-        method: 'POST',
-        body: formData
-      }).then(() => {
-        console.log('Отправлено');
-        form.reset();
-      })
-      .catch(() => console.log('Ошибка'));
-    }
+    //   fetch('../php/mail.php', {
+    //     method: 'POST',
+    //     body: formData
+    //   }).then(() => {
+    //     console.log('Отправлено');
+    //     form.reset();
+    //   })
+    //   .catch(() => console.log('Ошибка'));
+    // }
   })
 
   validation
-    .addField('.js-inpit-name', [
-      {
-        rule: 'required',
-        errorMessage: 'Введите Имя',
-      },
-      {
-        rule: 'customRegexp',
-        value: /^[a-zа-яё]+$/i,
-        errorMessage: 'Недопустимое значение',
-      },
-      {
-        rule: 'minLength',
-        value: 3,
-        errorMessage: 'Имя слишком короткое',
-      }
+    .addField('.js-inpit-name', [{
+      rule: 'required',
+      errorMessage: 'Введите Имя',
+    },
+    {
+      rule: 'customRegexp',
+      value: /^[a-zа-яё]+$/i,
+      errorMessage: 'Недопустимое значение',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Имя слишком короткое',
+    }
     ])
     .addField('.js-input-tel', [
       {
         rule: 'required',
+        value: true,
+        errorMessage: 'Телефон обязателен'
+      },
+      {
+        rule: 'function',
         validator: (name, value) => {
           const phone = selector.inputmask.unmaskedvalue()
-          return Number(phone) && phone.length === 10
+          return Boolean(Number(phone) && phone.length === 10)
         },
         errorMessage: 'Введите телефон',
       },
-    ])
+    ]).onSuccess((event) => {
+      console.log('Validation passes and form submited');
+
+      console.log(event);
+
+      let formData = new FormData(event.target);
+
+      console.log(...formData);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      event.target.reset();
+    })
 
   // Яндекс карта
   ymaps.ready(init);
-  function init(){
+
+  function init() {
     var myMap = new ymaps.Map('map', {
       center: [55.76011653, 37.61377158],
       zoom: 14,
-      controls: [],
+      controls: ['geolocationControl', 'zoomControl'],
+    }, {
+      suppressMapOpenBlock: true,
+      geolocationControlSize: "large",
+      geolocationControlPosition: {
+        top: "350px",
+        right: "15px"
+      },
+      geolocationControlFloat: 'none',
+      zoomControlSize: "small",
+      zoomControlFloat: "none",
+      zoomControlPosition: {
+        top: "280px",
+        right: "15px"
+      }
     });
+
+    myMap.behaviors.disable('scrollZoom');
 
     var myPlacemark = new ymaps.Placemark([55.76011653, 37.61377158], {}, {
       iconLayout: 'default#image',

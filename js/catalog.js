@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnAutorEL.forEach(item => {
     item.addEventListener('click', event => {
-
       const path = event.currentTarget.dataset.pathTabsContent;
 
       tabsContentEL.forEach(tabContent => {
@@ -63,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnFlagsEL[2].click();
   btnAutorEL[47].click();
+
 
   // Добавляем плавную прокрутку до художника в мобильной версии
   function getWindowWidth() {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.scrollBy({
       top: elementPosition,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 })

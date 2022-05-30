@@ -4,10 +4,18 @@
   /*Верхний блок*/
   /*Лого*/
   .header__link-logo {
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
   /*Меню навигации*/
+  .header__nav-wrap {
+    flex: 0 1 870px;
+  }
+
+  .header__nav-wrap {
+    align-items: center;
+  }
+
   .header__nav {
     margin-right: 20px;
   }
@@ -57,37 +65,46 @@
 
   /*Лого*/
   .header__link-logo {
+    margin-right: 0;
     min-width: 188px;
     height: 42px;
   }
 
   /*Меню навигации*/
   .header__nav-wrap {
-    position: absolute;
-    top: -1000%;
-    right: 0;
-    bottom: 0;
+    position: fixed;
+    top: 0;
     left: 0;
+    display: none;
     padding: 96px 48px 51px;
     width: 100%;
-    max-height: 768px;
+    max-height: 100vh;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 4;
   }
 
+  .header__scroll-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 621px;
+    max-height: calc(100vh - 147px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
   .header__nav-scroll {
     flex-direction: column;
-    align-items: start;
-  }
-
-  .header__container-simplebar {
+    align-items: flex-start;
     width: 100%;
     height: 621px;
+    max-height: calc(100vh - 147px);
   }
 
-  .header__nav-scroll {
-    width: 100%;
-    height: 621px;
+  .header__nav {
+    margin-bottom: 50px;
   }
 
   .header__nav-list {
@@ -112,12 +129,9 @@
   }
 
   /*Поиск*/
-  .header__search-form_mobile {
-    background-color: #18171B;
-  }
-
-  .header__search-btn_mobile-active {
+  .header__search-btn_open {
     display: block;
+    padding-right: 0;
   }
 
   /*Нижний контейнер*/
@@ -205,7 +219,7 @@
   }
 
   .modals__slider {
-    max-width: 594px;
+    max-width: calc(100vw - 100px);
     min-height: 594px;
   }
 
@@ -322,6 +336,10 @@
     flex-basis: 342px;
   }
 
+  .ymaps-2-1-79-controls__control {
+    display: none;
+  }
+
   /* footer */
   .footer {
     padding-top: 44px;
@@ -346,40 +364,9 @@
 @media (max-width: 768px) {
 
   /*Поиск*/
-  .header__search-btn_mobile-active {
-    display: block;
-  }
-
-  .header__search-btn_mobile-active::before,
-  .header__search-btn_mobile-active::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: 0;
-    width: 0;
-    height: 0;
-    background-color: var(--color-white);
-    z-index: 7;
-  }
-
-  .header__search-btn_mobile-active::before {
-    transform: rotate(45deg);
-  }
-
-  .header__search-btn_mobile-active::after {
-    transform: rotate(-45deg);
-  }
-
   .header__search-form_mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 34px 100px 34px 50px;
-    max-height: 100px;
-    background-color: var(--color-black);
+    width: calc(100vw - 100px);
+    height: 100%;
     z-index: 6;
   }
 
@@ -464,10 +451,6 @@
     left: 42px;
   }
 
-  .modals__slider {
-    max-width: 668px;
-  }
-
   .modals__img {
     max-width: 301px;
   }
@@ -490,8 +473,8 @@
   }
 
   .section-catalog__wrap-filter {
-    flex-direction: column;
-    align-items: flex-start;
+    /* flex-direction: column;
+    align-items: flex-start; */
     margin-bottom: 14px;
   }
 
@@ -619,12 +602,15 @@
   /*Меню навигации*/
   .header__nav-wrap {
     padding: 96px 48px 51px;
-    max-height: 565px;
   }
 
-  .header__container-simplebar {
+  .header__scroll-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 418px;
+    max-height: calc(100vh - 147px);
   }
 
   .header__nav-scroll {
@@ -641,6 +627,12 @@
   .header__link-account {
     border-radius: 100px;
     padding: 15px 60px;
+  }
+
+  /* Поиск */
+  .header__search-form_mobile {
+    right: 15px;
+    width: calc(100vw - 30px);
   }
 
   /*Section hero*/
@@ -735,6 +727,12 @@
   }
 
   /* Каталог */
+  .section-catalog__wrap-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-bottom: 14px; */
+  }
+
   .accordion__list-author {
     columns: 2;
   }
@@ -814,24 +812,31 @@
 
   /*Лого*/
   .header__link-logo {
-    min-width: 97px;
+    min-width: 107px;
     height: 22px;
   }
 
   /*Меню навигации*/
   .header__nav-wrap {
     padding: 46px 15px 27px;
-    max-height: 355px;
+    /* max-height: 355px; */
+    max-height: 100vh;
   }
 
-  .header__container-simplebar {
+  .header__scroll-wrap {
+    height: 282px;
+    max-height: calc(100vh - 73px);
+  }
+
+  /* .header__container-simplebar {
     width: 100%;
     height: 282px;
-  }
+  } */
 
   .header__nav-scroll {
     width: 100%;
     height: 282px;
+    max-height: calc(100vh - 73px);
   }
 
   .header__nav-link {
@@ -852,20 +857,33 @@
   }
 
   /*Поиск*/
+  .header__search-btn_open svg,
+  .header__search-btn_mobile svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .header__search-form_mobile {
+    right: 0;
     margin-left: 0;
-    padding: 40px 60px 19px;
+    padding: 40px 9px 19px 60px;
+    width: 100%;
     height: 75px;
     background-color: rgba(0, 0, 0, 0.9);
   }
 
-  .header__search-btn_mobile {
-    margin-right: -6px;
-    margin-bottom: -6px;
-    width: 27px;
-    height: 27px;
-    background-image: url("../img/header/search_btn_mobile.svg");
-    background-size: 27px 27px;
+  .header__search-input_mobile {
+    margin-right: 32px;
+    width: 108px;
+  }
+
+  .header__search-btn_close {
+    padding-bottom: 20px;
+  }
+
+  .header__search-btn_close svg {
+    width: 15px;
+    height: 15px;
   }
 
   /*Section hero*/
@@ -1012,10 +1030,6 @@
     margin-bottom: 12px;
   }
 
-  .modals__description-artwork {
-    max-height: 277px;
-  }
-
   /* Каталог */
   .section-catalog {
     padding-top: 50px;
@@ -1150,7 +1164,7 @@
   }
 
   .section-projects__title {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .section-projects__description {
